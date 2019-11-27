@@ -1,812 +1,812 @@
 ---
-title: OpenGD77 Guía de Usuario
+OpenGD77  Guía del usuario 
 ---
 
-![](media/OpenGD77-logo.svg)
+! [] (media / OpenGD77-logo.svg)
 
-# OpenGD77 User Guide 
-(19th November 2019)
+# OpenGD77 Guía del usuario
+(19 de noviembre de 2019)
 
-## Introduction
+## Introducción
 
-This user guide is a work in progress as is the Open GD77 firmware. If you find any errors or omissions please let me know so they can be corrected. 
+Esta guía del usuario es un trabajo en progreso al igual que el firmware Open GD77. Si encuentra algún error u omisión, avíseme para que puedan corregirse.
 
-This manual covers both the original Tier 1 / Phase one version, which includes Hotspot mode, as well as the Tier 2 Alpha versions which don’t include Hotspot mode, but to have other new features.
+Este manual cubre tanto la versión original de Nivel 1 / Fase uno, que incluye el modo Hotspot, como las versiones Alpha de Nivel 2 que no incluyen el modo Hotspot, sino que tiene otras características nuevas.
 
-Due to the rapid pace of development some of photos of screens are now out of date, because the DMR TS and CC are now down shown on all DMR screens.
+Debido al rápido ritmo de desarrollo, algunas fotos de pantallas ahora están desactualizadas, porque el DMR TS y CC ahora se muestran en todas las pantallas DMR.
 
-The photos will be updated when the firmware is not changing so quickly
+Las fotos se actualizarán cuando el firmware no cambie tan rápidamente.
 
-The intention of the OpenGD77 project is to create a fully featured non-commercial firmware that entirely replaces the Radioddity GD-77’s factory firmware. This firmware is specifically designed for **Amateur Radio** use, and has features not available in the official firmware.
+La intención del proyecto OpenGD77 es crear un firmware no comercial con todas las funciones que reemplace por completo el firmware de fábrica de Radioddity GD-77. Este firmware está diseñado específicamente para uso ** ** Radio Amateur **, y tiene características no disponibles en el firmware oficial.
 
-**Note.**
-**The firmware is still under development and there are some key areas of functionality which have yet to be written.**
+**Nota.**
+** El firmware aún está en desarrollo y hay algunas áreas clave de funcionalidad que aún no se han escrito. **
 
-1. Currently the stable firmware only works on DMR with simplex hotspots or to other DMR radios for simplex contacts. This is because the firmware currently does not fully support DMR Tier 2 required for most commercial and MMDVM repeater systems.
+1. Actualmente, el firmware estable solo funciona en DMR con puntos de acceso simplex o en otras radios DMR para contactos simplex. Esto se debe a que el firmware actualmente no es totalmente compatible con DMR Tier 2 requerido para la mayoría de los sistemas comerciales y de repetidores MMDVM.
 
-   However DMR mode can be used with a simplex hotspot and for DMR simplex operation.
+   Sin embargo, el modo DMR se puede usar con un punto de acceso simplex y para la operación DMR simplex.
 
-   There is pre-release (Alpha 2) version which supports Tier2 , repeater and duplex hotspot operation, but it currently has some minor issues.
+   Existe una versión de prelanzamiento (Alpha 2) que admite la operación de punto de acceso Tier2, repetidor y dúplex, pero actualmente tiene algunos problemas menores.
 
-   *Note. The Tier 2 version does not currently support Hotspot mode*
+   *Nota. La versión de Nivel 2 actualmente no es compatible con el modo Hotspot *
 
-1. FM Rx and Tx transmission works.
+1. La transmisión FM Rx y Tx funciona.
 
-   This includes repeater operation using CTCSS on both Tx and Rx.
+   Esto incluye la operación del repetidor usando CTCSS en Tx y Rx.
 
-1. On DMR, only Talk Group “calls” and Private calls are currently possible
+1. En DMR, solo son posibles las "llamadas" de Talk Group y las llamadas privadas
 
-   Text messaging and other similar features are currently not supported, but are on the To Do list.
+   Los mensajes de texto y otras funciones similares no son compatibles actualmente, pero están en la lista de tareas pendientes.
 
-   For a full list of current bugs, and proposed enhancements see  
+   Para obtener una lista completa de los errores actuales y las mejoras propuestas, consulte
    https://github.com/rogerclarkmelbourne/opengd77/issues
 
-The firmware is designed for Amateur Radio use, especially on DMR, and has a number of features for Amateur Radio use which are not normally available on commercial DMR radios.
+El firmware está diseñado para el uso de Radioaficionados, especialmente en DMR, y tiene una serie de características para el uso de Radioaficionados que normalmente no están disponibles en radios DMR comerciales.
 
-These include direct numerical entry of DMR TalkGroup numbers and use of the Rx Group list to control the TG’s selectable for each DMR “channel”
+Estos incluyen la entrada numérica directa de los números de DMR TalkGroup y el uso de la lista Rx Group para controlar los TG seleccionables para cada "canal" DMR
 
-Also, as far as possible the firmware is open source. This allows anyone to modify the firmware to suit their own individual needs, and also for peer review and improvement of the firmware source code
+Además, en la medida de lo posible, el firmware es de código abierto. Esto permite que cualquiera pueda modificar el firmware para satisfacer sus propias necesidades individuales, y también para la revisión por pares y la mejora del código fuente del firmware
 
-#### Credits:
+#### Créditos:
 
-The project was conceived by Kai DG4KLU, who developed the initial framework and all the FM and DMR Tx and Rx (Tier 1) functionality.
+El proyecto fue concebido por Kai DG4KLU, quien desarrolló el marco inicial y toda la funcionalidad FM y DMR Tx y Rx (Nivel 1).
 
-Kai ceased actively participating in the project in June 2019 and at the time of writing Roger VK3KYY is the main and only developer.
+Kai dejó de participar activamente en el proyecto en junio de 2019 y, al momento de escribir este artículo, Roger VK3KYY es el desarrollador principal y único.
 
-The Tier 2 functionality, User Interface, Display driver, Codeplug API, EEPROM memory API, Flash memory API, Hotspot mode and many other features were developed by Roger VK3KYY
+Roger VK3KYY desarrolló la funcionalidad de nivel 2, la interfaz de usuario, el controlador de pantalla, la API Codeplug, la API de memoria EEPROM, la API de memoria Flash, el modo Hotspot y muchas otras características.
 
-Multiple bug fixes and additions from Alex DL4LEX, including the Lock Screen and DTMF and Tone burst functions
+Múltiples correcciones de errores y adiciones de Alex DL4LEX, incluidas la pantalla de bloqueo y las funciones DTMF y Tone burst
 
-Graphical and other enhancements from Daniel F1RMB
+Mejoras gráficas y otras de Daniel F1RMB
 
-Additions from Colin G4EML, including FM CTCSS and “All Channels” zone functionality
+Adiciones de Colin G4EML, incluyendo FM CTCSS y funcionalidad de zona "Todos los canales"
 
-This user guide was written by Roger VK3KYY based on work by Alister G0NEF
+Esta guía del usuario fue escrita por Roger VK3KYY basada en el trabajo de Alister G0NEF
 
-Thanks to all the Beta Testers that provide detailed bug reports and user feedback, especially VK7ZCR, W1RHS and G4TSN
+Gracias a todos los Beta Testers que proporcionan informes detallados de errores y comentarios de los usuarios, especialmente VK7ZCR, W1RHS y G4TSN
 
-#### Download links and other resources
+#### Descargar enlaces y otros recursos
 
-**Firmware source code and binaries:**
+** Código fuente de firmware y binarios: **
 
-Stable version: (Tier 1 + Hotspot mode)  
+Versión estable: (Modo Tier 1 + Hotspot)
 https://github.com/rogerclarkmelbourne/OpenGD77/raw/master/firmware_binaries/OpenGD77.sgl
 
-Tier 2 “Alpha 2”version (Does not include Hotspot mode)  
+Versión de nivel 2 "Alpha 2" (no incluye el modo Hotspot)
 https://github.com/rogerclarkmelbourne/OpenGD77/raw/Tier2/firmware_binaries/daily_builds/OpenGD77_Tier2_Alpha_2.sgl
 
-**GD-77 Community CPS with support for OpenGD77:**  
+** GD-77 Community CPS con soporte para OpenGD77: **
 https://github.com/rogerclarkmelbourne/radioddity_gd-77_cps/raw/master/installer/RadioddityGD77CPS31XCommunityEditionInstaller.exe
 
-## Installation
+## Instalación
 
-The firmware can be installed onto the GD-77 using the firmware update tool provided by Radioddity with their official firmware update packages. This can be downloaded from Radioddity’s website [radioddity.com](https://radioddity.com/) . See Radioddity’s documentation on how to use their firmware update tool.
+El firmware se puede instalar en el GD-77 utilizando la herramienta de actualización de firmware provista por Radioddity con sus paquetes oficiales de actualización de firmware. Esto se puede descargar del sitio web de Radioddity [radioddity.com] (https://radioddity.com/). Consulte la documentación de Radioddity sobre cómo usar su herramienta de actualización de firmware.
 
-The newer versions of the Community CPS also have a feature in the Extras menu to upload the firmware into the radio.
+Las versiones más recientes de Community CPS también tienen una función en el menú Extras para cargar el firmware en la radio.
 
-The OpenGD77 firmware (.sgl file) can be downloaded from Github, using either of the links as listed in section 1.1 of this guide.
+El firmware OpenGD77 (archivo .sgl) se puede descargar desde Github, utilizando cualquiera de los enlaces que se enumeran en la sección 1.1 de esta guía.
 
-Installation of the OpenGD77 firmware is undertaken at the owners own risk, but the official firmware can usually be reloaded onto the GD-77 if the user has problems with the OpenGD77 firmware.
+La instalación del firmware OpenGD77 se realiza bajo el riesgo del propietario, pero el firmware oficial generalmente se puede volver a cargar en el GD-77 si el usuario tiene problemas con el firmware OpenGD77.
 
-Note. The official Radioddity GD-77 CPS PC software is not compatible with the OpenGD77 firmware, and the “Community CPS” should be used instead. This can be downloaded from the link show in section 1.1 of this guide
+Nota. El software oficial para PC Radioddity GD-77 CPS no es compatible con el firmware OpenGD77, y en su lugar se debe utilizar el "Community CPS". Esto se puede descargar desde el enlace que se muestra en la sección 1.1 de esta guía
 
-## Main screens (VFO and Channel screens)
+## Pantallas principales (pantallas VFO y Channel)
 
-The OpenGD77 firmware has 2 main screens.  The VFO screen and the Channel screen. These are similar to the channel and VFO screens in the official firmware, except have additional functionality.
+El firmware OpenGD77 tiene 2 pantallas principales. La pantalla VFO y la pantalla del canal. Estos son similares a las pantallas de canal y VFO en el firmware oficial, excepto que tienen una funcionalidad adicional.
 
-Initially after the OpenGD77 firmware is installed, the VFO screen will be displayed.
+Inicialmente después de instalar el firmware OpenGD77, se mostrará la pantalla VFO.
 
-![](media/vfo-screen.jpg)
+! [] (media / vfo-screen.jpg)
 
-The frequency used in the VFO for both Tx and Rx will be read from the “VFO A” settings of the codeplug.
+La frecuencia utilizada en el VFO para Tx y Rx se leerá en la configuración "VFO A" del codeplug.
 
-On both the VFO and Channel screens, the mode (DMR or FM) is shown in the top left of the display, and the battery voltage percentage is shown in the top right of the display
+En las pantallas VFO y Channel, el modo (DMR o FM) se muestra en la esquina superior izquierda de la pantalla y el porcentaje de voltaje de la batería se muestra en la esquina superior derecha de la pantalla.
 
-In DMR mode the current TimeSlot is shown to the right of the “DMR” text e.g TimeSlot 2 “TS2
-, and the Colour Code e.g. “C1” is shown to the left of the battery percentage.
+En modo DMR, el TimeSlot actual se muestra a la derecha del texto "DMR", por ejemplo, TimeSlot 2 "TS2
+y el Código de color, p. Se muestra "C1" a la izquierda del porcentaje de batería.
 
-The current Tx power is shown in the middle of the top of the screen. E.g. 750mW 
+La potencia de transmisión actual se muestra en el medio de la parte superior de la pantalla. P.ej. 750mW
 
-On the VFO screen, the Tx and Rx frequency are shown, as well as the TalkGroup when in DMR mode.
+En la pantalla VFO, se muestran las frecuencias Tx y Rx, así como el TalkGroup cuando está en modo DMR.
 
-The arrow to the left of the R (receive frequency) indicates that the keypad up and down arrows and number entry keys will control the Rx frequency.
+La flecha a la izquierda de la R (frecuencia de recepción) indica que las flechas hacia arriba y hacia abajo del teclado y las teclas de entrada de número controlarán la frecuencia de Rx.
 
-The channel screen displays the same information in the top row, but displays the Channel name (in this example “VK3RGL D”) as well as the Zone (“VK3 DMR”) and in DMR mode the TalkGroup will also be displayed
+La pantalla del canal muestra la misma información en la fila superior, pero muestra el nombre del canal (en este ejemplo, “VK3RGL D”), así como la zona (“VK3 DMR”) y en modo DMR también se mostrará el TalkGroup
 
-![](media/dmr-screen.jpg)
+! [] (media / dmr-screen.jpg)
 
-On both the VFO and Channel screens:
+En las pantallas VFO y Channel:
 
-Press the **Red** menu button to toggle between the VFO and Channel screens
+Presione el botón de menú ** Rojo ** para alternar entre las pantallas VFO y Canal
 
-Press the **Green** menu key to enter the menu system
+Presione la tecla de menú ** Verde ** para ingresar al sistema de menús
 
-Pressing **Function + Green** gives quick access to the Channel details screen, which can also be accessed via the menu system. 
-*Note.*
-The VFO is actually a special type of channel; hence the Channel Details screen also works for the VFO.
+Al presionar ** Función + Verde ** se accede rápidamente a la pantalla de detalles del Canal, a la que también se puede acceder a través del sistema de menús.
+*Nota.*
+El VFO es en realidad un tipo especial de canal; por lo tanto, la pantalla Detalles del canal también funciona para el VFO.
 
-#### Changing from VFO < -- > Channel
+#### Cambio de canal VFO <->
 
-Press the **Function + Star (*)** key to toggle between FM and DMR mode on either the VFO or Channel screens.
+Presione la tecla ** Función + Estrella (*) ** para alternar entre los modos FM y DMR en las pantallas VFO o Canal.
 
-#### Changing Timeslot in DMR mode
-In DMR mode, pressing the **Star (*)** key toggled between Timeslot 1 and Timeslot 2
+#### Cambio de intervalo de tiempo en modo DMR
+En modo DMR, al presionar la tecla ** Estrella (*) ** se alterna entre Timeslot 1 y Timeslot 2
 
-#### Controlling Tx power
+#### Control de la potencia de transmisión
 
-Press **Function + Right** to increase the power, Press **Function + Left** to decrease the power. Power can be set to 250mW, 500mW, 750mW, 1W, 2W, 3W, 4W and 5W.  
-Note. The power output will only be correct after the operator has calibrated their own radio, as the GD-77 does not seem to have very accurate power calibration applied in the factory by TYT
+Presione ** Función + Derecha ** para aumentar la potencia, Presione ** Función + Izquierda ** para disminuir la potencia. La potencia se puede configurar en 250mW, 500mW, 750mW, 1W, 2W, 3W, 4W y 5W.
+Nota. La potencia de salida solo será correcta después de que el operador haya calibrado su propia radio, ya que el GD-77 no parece tener una calibración de potencia muy precisa aplicada en la fábrica por TYT
 
-#### Signal strength bar graph
+#### Gráfico de barras de intensidad de señal
 
-In both FM and DMR mode, the signal strength of the received signal is show as a bar graph across with width of the screen. 100% bar graph is approximately S9 +40 dB.
+En los modos FM y DMR, la intensidad de la señal recibida se muestra como un gráfico de barras con el ancho de la pantalla. El gráfico de barras del 100% es aproximadamente S9 +40 dB.
 
-In DMR mode the signal meter will only be active when the DMR hardware detects a DMR signal.
+En modo DMR, el medidor de señal solo estará activo cuando el hardware DMR detecte una señal DMR.
 
-In FM mode the signal meter should operate all the time.
+En modo FM, el medidor de señal debe funcionar todo el tiempo.
 
-![](media/signal-meter.jpg)
+! [] (media / signal-meter.jpg)
 
-### Channel screen specific functionality
-The Channel screen displays the current Channel number as well as the current zone. 
+### Funcionalidad específica de la pantalla del canal
+La pantalla del canal muestra el número del canal actual, así como la zona actual.
 
-![](media/channel-and-zone.jpg)
+! [] (media / channel-and-zone.jpg)
 
-#### Changing channels within the current zone
+#### Cambio de canales dentro de la zona actual
 
-Pressing the **Up** or **Down arrow** keys changes channel in current zone, and the channel number in the zone will be displayed in place of the zone name.
+Al presionar las teclas ** Arriba ** o ** Abajo **, el canal cambia en la zona actual, y el número de canal en la zona se mostrará en lugar del nombre de la zona.
 
-#### Changing zones
+#### Cambio de zonas
 
-Pressing **Function + Up arrow** or **Function + Left arrow** changes to the next or previous zone
+Presionando ** Función + Flecha arriba ** o ** Función + Flecha izquierda ** cambia a la zona siguiente o anterior
 
-![](media/changing-zones.jpg)
+! [] (media / changing-zones.jpg)
 
-#### Channel screen Quick menu
+#### Pantalla del canal Menú rápido
 
-Pressing the **Orange** button on the top of the radio in Channel mode displays the Quick menu for the Channel screen.
+Al presionar el botón ** Naranja ** en la parte superior de la radio en el modo Canal, aparece el menú Rápido para la pantalla Canal.
 
-##### Copying a channel to VFO
+##### Copiando un canal a VFO
 
-##### Read the VFO into the current channel
+##### Lee el VFO en el canal actual
 
-Press the **Green** key to confirm and save the updated channel to the codeplug memory **Red** key to cancel.
+Presione la tecla ** Verde ** para confirmar y guardar el canal actualizado en la memoria de codeplug ** Tecla ** roja para cancelar.
 
-![](media/channel-quick-menu.jpg)
+! [] (media / channel-quick-menu.jpg)
 
-#### VFO Quick menu
+#### Menú rápido de VFO
 
-Pressing the **Orange** button on the top of the radio in VFO mode displays the Quick menu for the VFO screen. Currently this has three options
+Al presionar el botón ** Naranja ** en la parte superior de la radio en modo VFO, se muestra el menú Rápido para la pantalla VFO. Actualmente esto tiene tres opciones
 
-##### Copy Tx frequency to the Rx frequency
+##### Copie la frecuencia Tx a la frecuencia Rx
 
-##### Exchange the Tx and Rx frequencies
+##### Intercambia las frecuencias Tx y Rx
 
-##### Copy the Rx frequency to the Tx frequency
+##### Copie la frecuencia Rx a la frecuencia Tx
 
-Press the **Green** key to confirm the copy or **Red** key to cancel. 
+Presione la tecla ** Verde ** para confirmar la copia o la tecla ** Roja ** para cancelar.
 
-![](media/vfo-quick-menu.jpg)
+! [] (media / vfo-quick-menu.jpg)
 
-**Note.**
+**Nota.**
 
-Listening to the input of a repeater will only work in DMR mode if both the Tx frequency and the Rx frequency are the same. This is because most DMR radios do not give an option to select Tier2 Active or Tier 2 Passive mode, and instead assume that if the Tx and Rx frequencies are the same the radio needs to be in Active mode, where the radio is the DMR master. Whereas if the Tx and Rx frequencies are the same the radio assumes it needs to operate in Tier 2 Passive mode, where the repeater signal controls the DMR timeslot synchronization.
+Escuchar la entrada de un repetidor solo funcionará en modo DMR si la frecuencia Tx y la frecuencia Rx son las mismas. Esto se debe a que la mayoría de las radios DMR no ofrecen la opción de seleccionar el modo pasivo Tier2 o pasivo Tier 2, y en su lugar suponen que si las frecuencias Tx y Rx son las mismas, la radio debe estar en modo activo, donde la radio es el maestro DMR . Mientras que si las frecuencias Tx y Rx son las mismas, la radio asume que necesita operar en modo pasivo de nivel 2, donde la señal del repetidor controla la sincronización del intervalo de tiempo DMR.
 
-However to listen on the input of a repeater, the signal that is received does not contain the synchronisation information hence the radio needs to be put into DMR Active mode in order to receive the signal.
+Sin embargo, para escuchar la entrada de un repetidor, la señal que se recibe no contiene la información de sincronización, por lo tanto, la radio debe ponerse en modo DMR activo para recibir la señal.
 
-I am not sure whether the official firmware is able to receive on the input of a repeater if a channel was setup with the Tx and Rx frequencies swapped, but because of the way the OpenGD77 firmware actually monitors both TimeSlots simultaneously, but only decodes the TG/ID and audio for the selected TS.
+No estoy seguro de si el firmware oficial puede recibir en la entrada de un repetidor si se configuró un canal con las frecuencias Tx y Rx intercambiadas, pero debido a la forma en que el firmware OpenGD77 realmente monitorea ambos TimeSlots simultáneamente, pero solo decodifica el TG / ID y audio para el TS seleccionado.
 
-### DMR specific functionality (VFO and Channel screens)
+### Funcionalidad específica de DMR (pantallas VFO y Channel)
 
-#### Timeslot selection
+#### Selección de intervalo de tiempo
 
-The **Star (*)** key toggles between Timeslot 1 and Timeslot 2 (Tier 2 version)
+La tecla ** Estrella (*) ** alterna entre Timeslot 1 y Timeslot 2 (versión de Nivel 2)
 
-Note. The Timeslot number is not shown in this photo but appears to the right of the “DMR”, also the Colour Code is show to the left of the battery percentage
+Nota. El número de intervalo de tiempo no se muestra en esta foto, pero aparece a la derecha del "DMR", también se muestra el Código de color a la izquierda del porcentaje de batería
 
-#### DMR ID callsign and name display
+#### DMR ID indicativo de llamada y visualización de nombre
 
-When a DMR signal is received which uses the same Colour Code as selected for the VFO or Channel, the radio display will show the station’s Talkgroup and DMR ID
+Cuando se recibe una señal DMR que usa el mismo código de color seleccionado para el VFO o el canal, la pantalla de la radio mostrará el grupo de conversación de la estación y la ID DMR
 
-![](media/talkgroup-and-dmr-id.jpg)
+! [] (media / talkgroup-and-dmr-id.jpg)
 
-If the DMR ID is in the DMR ID database previously loaded into the radio, the callsign and name will be displayed.
+Si la ID de DMR está en la base de datos de ID de DMR cargada previamente en la radio, se mostrará el indicativo y el nombre.
 
-![](media/callsign-and-name.jpg)
+! [] (media / callsign-and-name.jpg)
 
-#### Talker Alias display
+#### Pantalla de alias de hablador
 
-On the Brandmeister network, if the station’s DMR ID is not in the DMR ID database, the display will show the Talker Alias information sent by Brandmeister.
+En la red Brandmeister, si la ID de DMR de la estación no está en la base de datos de ID de DMR, la pantalla mostrará la información de Alias ​​Talker enviada por Brandmeister.
 
-![](media/talker-alias.jpg)
+! [] (media / talker-alias.jpg)
 
-The callsign will be displayed in the centre of the screen, and additional information will be displayed at the bottom of the screen. The additional information will default to the text “DMR ID:” followed by the stations DMR ID number.
+El indicativo se mostrará en el centro de la pantalla y se mostrará información adicional en la parte inferior de la pantalla. La información adicional tendrá como valor predeterminado el texto "ID de DMR:" seguido del número de ID de DMR de la estación.
 
-If the station has entered any data into the APRS section of their Brandmeister “Self care” page, that text will be display in place of the DMR ID number.
+Si la estación ha ingresado algún dato en la sección APRS de su página Brandmeister "Self care", ese texto se mostrará en lugar del número de ID de DMR.
 
-![](media/talker-alias-data.jpg)
+! [] (media / talker-alias-data.jpg)
 
-Note. As the Talker Alias data is sent slowly as it is embedded inside the DMR audio data frames, the callsign will appear first and about half a second later the DMR ID or other text will arrive via the DMR data and be displayed.
+Nota. A medida que los datos de Talker Alias ​​se envían lentamente a medida que se incrustan dentro de los marcos de datos de audio DMR, el indicativo aparecerá primero y aproximadamente medio segundo después, la ID DMR u otro texto llegará a través de los datos DMR y se mostrará.
 
-#### Talkgroup selection from the Rx Group list
+#### Selección de grupo de conversación de la lista de grupos Rx
 
-Press the **Left** or **Right Arrow** keys to cycle through the TalkGroups in the RxGroup assigned to the VFO or Channel in the CPS. 
-This TalkGroup will apply to both Rx and Tx.
+Presione las teclas ** Izquierda ** o ** Flecha derecha ** para recorrer los Grupos de conversación en el Grupo Rx asignado al VFO o Canal en el CPS.
+Este TalkGroup se aplicará tanto a Rx como a Tx.
 
-#### Assignment of Timeslot to Digital Contact TalkGroup
+#### Asignación de Timeslot a Digital Contact TalkGroup
 
-A new feature introduced to the Community CPS allows a TimeSlot to be applied to each Digital Contact TalkGroup
+Una nueva característica introducida en Community CPS permite que se aplique un TimeSlot a cada grupo de conversación de contacto digital
 
-By default, the Channel TS override is disabled. This means that if the **Left** or **Right** arrows are pressed to select this TG within the Rx Group list, the Timeslot assigned to the Channel (in the CPS) or manually changed using the **Star** key will not change
+De manera predeterminada, la anulación del canal TS está deshabilitada. Esto significa que si se presionan las flechas ** Izquierda ** o ** Derecha ** para seleccionar este TG dentro de la lista Grupo Rx, el intervalo de tiempo asignado al Canal (en el CPS) o se cambia manualmente usando la ** Estrella ** la llave no cambiará
 
-However if the Digital Contact has an override TS assigned. E.g. TS 1. 
-When this Digital Contact TG is selected by pressing the Right or Left arrows, the Timeslot will be set to the Timeslot assigned to the Digital Contact TG
+Sin embargo, si el contacto digital tiene un TS de anulación asignado. P.ej. TS 1.
+Cuando este contacto digital TG se selecciona presionando las flechas derecha o izquierda, el intervalo de tiempo se establecerá en el intervalo de tiempo asignado al contacto digital TG
 
-#### TalkGroup displayed in inverse video
+#### TalkGroup se muestra en video inverso
 
-If a Talkgroup is displayed in inverse video during reception of a DMR signal, this indicates that the current Tx TalkGroup does not match the received TalkGroup, hence pressing the PTT would not transmit back to the station on the same TalkGroup.
+Si se muestra un Talkgroup en video inverso durante la recepción de una señal DMR, esto indica que el Tx TalkGroup actual no coincide con el TalkGroup recibido, por lo tanto, presionar el PTT no transmitirá a la estación en el mismo TalkGroup.
 
-If you want to transmit on the same TalkGroup as the currently received signal, press the **Function** (blue) button on the side of the radio while the TalkGroup is being displayed in inverse video and Tx TalkGroup will be set to the Rx TalkGroup
+Si desea transmitir en el mismo TalkGroup que la señal recibida actualmente, presione el botón ** Función ** (azul) en el costado de la radio mientras el TalkGroup se muestra en video inverso y Tx TalkGroup se configurará en Rx TalkGroup
 
-![](media/talkgroup-inverse-video.jpg)
+! [] (media / talkgroup-inverse-video.jpg)
 
-#### Manual TalkGroup number entry
+#### Entrada manual del número de TalkGroup
 
-Press the **Hash (#)** button to enter the TalkGroup number. Followed by the **Green** key to confirm
+Presione el botón ** Hash (#) ** para ingresar el número de TalkGroup. Seguido por la tecla ** Verde ** para confirmar
 
-![](media/talkgroup-entry.jpg)
+! [] (media / talkgroup-entry.jpg)
 
-#### Private Call number entry
+#### Entrada de número de llamada privada
 
-Press the **Hash (#)** again to enter a Private Call DMR ID number. 
+Presione el ** Hash (#) ** nuevamente para ingresar un número de ID de DMR de llamada privada.
 
-![](media/private-call-entry.jpg)
+! [] (media / private-call-entry.jpg)
 
-In all numeric entry screens, pressing the Red menu key exits back to the previous screen, either the VFO or Channel screen
+En todas las pantallas de entrada numérica, al presionar la tecla de menú roja se vuelve a la pantalla anterior, ya sea la pantalla VFO o Channel
 
-#### Digital Contact selection
+#### Selección de contacto digital
 
-Press the **Hash (#)** again to access the Digital contacts defined in the CPS
+Presione ** Hash (#) ** nuevamente para acceder a los contactos digitales definidos en el CPS
 
-![](media/contact-selection.jpg)
+! [] (media / contact-selection.jpg)
 
-The contact name is show in the middle of the screen, e.g. “TG 505 TS2” and the TalkGroup or PC number is shown in smaller text at the bottom of the screen
+El nombre del contacto se muestra en el medio de la pantalla, p. "TG 505 TS2" y el número de TalkGroup o PC se muestran en un texto más pequeño en la parte inferior de la pantalla
 
-Press the **Up** or **Down** arrows to cycle through the list of Digital Contacts
+Presione las flechas ** Arriba ** o ** Abajo ** para recorrer la lista de Contactos digitales
 
-Press **Green** to select or **Red** to cancel.
+Presione ** Verde ** para seleccionar o ** Rojo ** para cancelar.
 
-Private calls can also be selected. 
+Las llamadas privadas también se pueden seleccionar.
 
-![](media/private-call-selection.jpg)
+! [] (media / private-call-selection.jpg)
 
-#### Station DMR ID number entry
+#### Entrada del número de ID de DMR de la estación
 
-In Contact selection mode, press **Function + Hash (#)** key, and an alternative DMR ID can be entered, for test purposes, to temporarily override your normal DMR ID number which was loaded from the codeplug.
+En el modo de selección de contacto, presione la tecla ** Función + Hash (#) **, y se puede ingresar una ID de DMR alternativa, para propósitos de prueba, para anular temporalmente su número de ID de DMR normal que se cargó del codeplug.
 
-This DMR ID will be used for transmission *until* the radio is rebooted or you enter another DMR ID via the same screen.
+Esta ID de DMR se usará para la transmisión * hasta que * la radio se reinicie o ingrese otra ID de DMR a través de la misma pantalla.
 
-To make the change permanent, so that its written back to the codeplug Press **Function + Green** instead of **Green** to enter the number.
+Para que el cambio sea permanente, de modo que se regrese al codeplug Presione ** Función + Verde ** en lugar de ** Verde ** para ingresar el número.
 
-![](media/user-dmr-id.jpg)
+! [] (media / user-dmr-id.jpg)
 
-### FM specific functionality (VFO and Channel screens)
+### Funcionalidad específica de FM (pantallas VFO y Channel)
 
-#### FM / FM Narrow
+#### FM / FM Estrecho
 
-**For FM with 25kHz band with the text “FM” is displayed in the top left of the screen.
-For narrow band / 12.5kHz the text “FMN” is displayed**
+** Para FM con banda de 25 kHz con el texto "FM" se muestra en la esquina superior izquierda de la pantalla.
+Para banda estrecha / 12.5kHz se muestra el texto "FMN" **
 
-#### CTCSS tone
+#### tono CTCSS
 
-This can be set for the Channel or VFO, the letters **CT** **CR** or **CTR** will be displayed next to the FM indication at the top of the screen.
+Esto se puede configurar para el canal o VFO, las letras ** CT ** ** CR ** o ** CTR ** se mostrarán junto a la indicación de FM en la parte superior de la pantalla.
 
-**CT** means CTCSS Tx tone only. **CR** means CTCSS Rx tone only. **CTR** means CTCSS Tx and Rx tones.
+** CT ** significa solo tono CTCSS Tx. ** CR ** significa solo tono CTCSS Rx. ** CTR ** significa tonos CTCSS Tx y Rx.
 
-![](media/ctcss-tone.jpg)
+! [] (media / ctcss-tone.jpg)
 
-#### Squelch
+#### Silenciador
 
-Pressing **Left** or **Right** keys, activates the FM squelch control
+Al presionar las teclas ** Izquierda ** o ** Derecha **, se activa el control de silenciador FM
 
-![](media/squelch.jpg)
+! [] (media / squelch.jpg)
 
-Once in squelch control mode, pressing **Right** the squelch more, **Left** opens the squelch more.
+Una vez en el modo de control de silenciamiento, presionar ** Derecha ** más el silenciador, ** Izquierda ** abre más el silenciador.
 
-The VFO and each channel have individual squelch settings
+El VFO y cada canal tienen configuraciones de silenciador individuales
 
-The variable squelch can be set to different values for each Channel and for the VFO using a new feature in the Community CPS, where the squelch can be set anywhere between Open and Closed in 5% steps.
+El silenciador variable se puede configurar en diferentes valores para cada canal y para el VFO utilizando una nueva función en Community CPS, donde el silenciador se puede configurar en cualquier lugar entre Abierto y Cerrado en pasos de 5%.
 
-In this example the squelch in the VFO is set to 20%
+En este ejemplo, el silenciador en el VFO se establece en 20%
 
 
-If the squelch is changed in the VFO the value will be remembered even if the radio is power cycled. However if the squelch on a channel is changed, the value is only a temporary override. 
+Si se cambia el silenciador en el VFO, el valor se recordará incluso si la radio se apaga y enciende. Sin embargo, si se cambia el silenciador en un canal, el valor es solo una anulación temporal.
 
-To make the squelch change permanent to a Channel, press **Function + Green** to enter the Channel Details screen, and then press **Green** again to save the channel data to the codeplug.
+Para hacer que el cambio de silenciamiento sea permanente a un canal, presione ** Función + Verde ** para ingresar a la pantalla Detalles del canal, y luego presione ** Verde ** nuevamente para guardar los datos del canal en el código.
 
-Note.  
-If Rx CTCSS is enabled, this has priority over the squelch control, and lowering the squelch threshold will not cause the squelch to be opened.
+Nota.
+Si Rx CTCSS está habilitado, esto tiene prioridad sobre el control del silenciador, y bajar el umbral del silenciador no hará que se abra el silenciador.
 
-#### 1750Hz Tone for repeater operation
+#### 1750Hz Tono para operación repetidora
 
-Pressing the **Function** button during FM transmission, sends the 1750Hz tone required for some repeater operation.
+Al presionar el botón ** Función ** durante la transmisión de FM, se envía el tono de 1750Hz requerido para alguna operación del repetidor.
 
-#### DTMF tone transmission
+#### Transmisión de tonos DTMF
 
-Pressing any key on the keypad except the Green and Red menu keys will transmit the DTMF tones for that key.
+Al presionar cualquier tecla del teclado, excepto las teclas de menú Verde y Rojo, se transmitirán los tonos DTMF para esa tecla.
 
-The tone will also be audible through the speaker.
+El tono también será audible a través del altavoz.
 
-### VFO specific functionality
+### Funcionalidad específica de VFO
 
-![](media/vfo-screen.jpg)
+! [] (media / vfo-screen.jpg)
 
-The VFO displays both the Tx and Rx frequency at all times.
+El VFO muestra la frecuencia Tx y Rx en todo momento.
 
-When the currently selected frequency is the **Rx** frequency, an arrow is displayed to the left of the “**R**”, changes to the frequency will adjust both the Tx and Rx frequencies.
+Cuando la frecuencia seleccionada actualmente es la frecuencia ** Rx **, se muestra una flecha a la izquierda de “** R **”, los cambios en la frecuencia ajustarán las frecuencias Tx y Rx.
 
-#### Frequency change up/down step
+#### Cambio de frecuencia paso arriba / abajo
 
-Pressing the **Up** or **Down arrows**, will change frequency by the value defined in the frequency Step value defined for the VFO in the CPS.
+Al presionar las flechas ** Arriba ** o ** Abajo **, cambiará la frecuencia por el valor definido en la frecuencia Valor de paso definido para el VFO en el CPS.
 
-The step can be adjusted by pressing **Function + Green** to enter the Channel Details mode, and then adjusting the “Step” setting
+El paso se puede ajustar presionando ** Función + Verde ** para ingresar al modo Detalles de canal y luego ajustar la configuración de "Paso"
 
-#### Numerical frequency entry
+#### Entrada de frecuencia numérica
 
-Pressing any of the number keys allows the direct entry of the frequency.
+Al presionar cualquiera de las teclas numéricas se permite la entrada directa de la frecuencia.
 
-![](media/frequency-entry.jpg)
+! [] (media / frequency-entry.jpg)
 
-When all digits have been entered, the accept beep tones are played, and the display returns to the VFO screen. 
+Cuando se han ingresado todos los dígitos, se reproducen los pitidos de aceptación y la pantalla vuelve a la pantalla de VFO.
 
-If an invalid frequency is entered the error beep tones are played.
+Si se ingresa una frecuencia no válida, se reproducen los pitidos de error.
 
-When entering a frequency:
+Al ingresar una frecuencia:
 
-Pressing the **Red** key cancels the entry
+Al presionar la tecla ** Rojo ** se cancela la entrada
 
-Pressing **Left Arrow** deletes the digits one by one.
+Al presionar ** Flecha izquierda ** se eliminan los dígitos uno por uno.
 
-#### To adjust the Tx frequency, independent of the Rx frequency. 
+#### Para ajustar la frecuencia Tx, independiente de la frecuencia Rx.
 
-Press the **Function (Blue)** button on the side of the radio, and the **Down arrow**. 
+Presione el botón ** Función (Azul) ** en el costado de la radio y la flecha ** Abajo **.
 
-This will change the currently selected frequency to the Tx frequency, and the arrow will move to the left of the “**T**” instead of the “**R**”
+Esto cambiará la frecuencia seleccionada actualmente a la frecuencia Tx, y la flecha se moverá a la izquierda de “** T **” en lugar de “** R **”
 
-To change the Rx frequency again, press **Function + Up arrow**.
+Para cambiar la frecuencia Rx nuevamente, presione ** Función + Flecha arriba **.
 
-When the Tx frequency is changed, the Rx frequency will not be changed.
+Cuando se cambia la frecuencia Tx, la frecuencia Rx no se cambiará.
 
-Use this method to set different Tx and Rx frequencies e.g. this can be useful for satellite operation as it allows Cross Band operation as well as split frequency simplex operation on the same band.
+Use este método para establecer diferentes frecuencias Tx y Rx, p. Esto puede ser útil para la operación satelital ya que permite la operación de banda cruzada, así como la operación simple de frecuencia dividida en la misma banda.
 
-**Note**
+**Nota**
 
-If different Tx and Rx frequencies are set, and the currently selected input is set to Rx. Changing the Rx frequency will also change the Tx frequency, and the difference between the Rx and Tx frequency will be maintained if possible.
+Si se configuran diferentes frecuencias Tx y Rx, y la entrada seleccionada actualmente se configura en Rx. Cambiar la frecuencia Rx también cambiará la frecuencia Tx, y la diferencia entre la frecuencia Rx y Tx se mantendrá si es posible.
 
-The only case where the frequency difference will not be maintained is if the Tx frequency goes outside of the range of frequencies supported by the radio hardware.
+El único caso en el que no se mantendrá la diferencia de frecuencia es si la frecuencia Tx se sale del rango de frecuencias admitidas por el hardware de radio.
 
-## Transmitting
+## Transmitiendo
 
-During transmission the Talk Timer, either counts up or down depending on whether the channel has a timeout defined.
+Durante la transmisión, el temporizador de conversación cuenta hacia arriba o hacia abajo dependiendo de si el canal tiene un tiempo de espera definido.
 
-If a timeout is defined in the CPS, or adjusted in the Channel Details screen, the Talk Timer will count down and when the timeout period is reached a beep will play and the Tx will stop.
+Si se define un tiempo de espera en el CPS, o se ajusta en la pantalla Detalles del canal, el temporizador de conversación contará hacia atrás y cuando se alcance el período de tiempo de espera se escuchará un pitido y el Tx se detendrá.
 
-In DMR Tier2 the timer will not start counting until the repeater becomes active.
+En DMR Tier2, el temporizador no comenzará a contar hasta que el repetidor se active.
 
-During DMR Tx a VU meter is displayed showing the input microphone level, in the form of a bar graph across the top of the screen.
+Durante DMR Tx, se muestra un medidor VU que muestra el nivel del micrófono de entrada, en forma de gráfico de barras en la parte superior de la pantalla.
 
-![](media/dmr-mic-level.jpg)
+! [] (media / dmr-mic-level.jpg)
 
-##### Timeout warning beep
+##### Pitido de advertencia de tiempo de espera
 
-A timeout warning can be configured in the Utilities menu. The radio will beep every 5 seconds when the remaining call time is less than the Timeout warning time that you have configured in the Options screen
+Se puede configurar una advertencia de tiempo de espera en el menú Utilidades. La radio emitirá un pitido cada 5 segundos cuando el tiempo de llamada restante sea inferior al tiempo de advertencia de Tiempo de espera que ha configurado en la pantalla Opciones
 
 ##### TOT
 
-If TOT is setup for the current channel or VFO, when the timer counts down to zero the transmission will stop, a warning beep will be played and the radio will stop transmitting
+Si TOT está configurado para el canal actual o VFO, cuando el temporizador haga la cuenta regresiva a cero, la transmisión se detendrá, se escuchará un pitido de advertencia y la radio dejará de transmitir
 
-![](media/timeout.jpg)
+! [] (media / timeout.jpg)
 
-## Other screens
+## Otras pantallas
 
-#### Lock screen
+#### Bloquear pantalla
 
-![](media/lock-screen.jpg)
+! [] (media / lock-screen.jpg)
 
-To the lock the keypad.
+A la cerradura el teclado.
 
-On either the VFO or the Channel screen, press the **Green** menu key to display the Main menu, then press the **Star (*)** key
+En la pantalla VFO o Channel, presione la tecla de menú ** Verde ** para mostrar el menú Principal, luego presione la tecla ** Estrella (*) **
 
-To unlock the keypad
+Para desbloquear el teclado
 
-Press and hold the **Function (Blue)** button and press the **Star (*)** key
+Presione y mantenga presionado el botón ** Función (Azul) ** y presione la tecla ** Estrella (*) **
 
-## The control keys and buttons
+## Las teclas y botones de control
 
-![](media/keys-and-buttons.png)
+! [] (media / keys-and-buttons-NEW.png)
 
-## The Menu System
+## El sistema de menús
 
-Pressing the **GREEN** key enters the menu system, press again to enter a menu subsection or to exit the menu.
+Al presionar la tecla ** VERDE ** se ingresa al sistema de menús, presione nuevamente para ingresar a una subsección del menú o para salir del menú.
 
-Press the **RED** key to step back one level or to exit the menu system.
+Presione la tecla ** ROJO ** para retroceder un nivel o para salir del sistema de menús.
 
-The **UP** and **DOWN** arrow keys step up and down through the various pages of the menu system.
+Las teclas de flecha ** ARRIBA ** y ** ABAJO ** suben y bajan por las distintas páginas del sistema de menús.
 
-The **LEFT** and **RIGHT** arrow keys will change the individual items in the menu system where they are changeable.
+Las teclas de flecha ** IZQUIERDA ** y ** DERECHA ** cambiarán los elementos individuales en el sistema de menús donde se pueden cambiar.
 
-The **BLUE** button on the side of the radio, known as SK2, is used as a “**Function**”. Various features are accessed by holding the “function” key when pressing a button on the keypad.
+El botón ** AZUL ** en el costado de la radio, conocido como SK2, se usa como “** Función **”. Se accede a varias funciones manteniendo presionada la tecla "función" cuando se presiona un botón en el teclado.
 
-## Main Menu
+## Menú principal
 
-![](media/main-menu.jpg)
+! [] (media / main-menu.jpg)
 
-### Zone
+### Zona
 
-This menu is used to select which groups of channels, called a Zone, is used in the Channel screen, and operates in the same way as the official Radioddity firmware, except with one addition.
+Este menú se usa para seleccionar qué grupos de canales, llamados Zona, se usan en la pantalla del Canal y funcionan de la misma manera que el firmware oficial de Radioddity, excepto con una adición.
 
-![](media/zones.jpg)
+! [] (media / zones.jpg)
 
-In addition to the Zones that are defined in the CPS and uploaded to the GD-77 using the Community CPS. The firmware creates a special Zone called all Channels
+Además de las zonas que se definen en el CPS y se cargan en el GD-77 utilizando el Community CPS. El firmware crea una zona especial llamada todos los canales
 
-![](media/all-channels.jpg)
+! [] (media / all-canales.jpg)
 
-When the All Channels zone is selected, the Channel screen displays the channel number instead of the zone name e.g. CH 1
+Cuando se selecciona la zona Todos los canales, la pantalla del canal muestra el número del canal en lugar del nombre de la zona, p. CH 1
 
-![](media/all-channels-channel-screen.jpg)
+! [] (media / all-canales-channel-screen.jpg)
 
-Pressing the **Up** and **Down** arrows will cycle though all channels in all zones
+Al presionar las flechas ** Arriba ** y ** Abajo ** se recorrerán todos los canales en todas las zonas
 
-Pressing any of the number keys on the keypad, enters   ‘Goto channel number mode’
+Al presionar cualquiera de las teclas numéricas en el teclado, ingresa "Pasar al modo de número de canal"
 
-![](media/goto-channel-number.jpg)
+! [] (media / goto-channel-number.jpg)
 
-In this mode, you can enter multiple digits and then press the Green key to confirm, or the Red key to go cancel.
+En este modo, puede ingresar varios dígitos y luego presionar la tecla verde para confirmar, o la tecla roja para cancelar.
 
 ### RSSI
 
-Displays a signal strength indicator showing the numerical RSSI value in dBm, along with an S-Unit bar graph.
+Muestra un indicador de intensidad de señal que muestra el valor numérico de RSSI en dBm, junto con un gráfico de barras de la Unidad S.
 
-![](media/rssi.jpg)
+! [] (media / rssi.jpg)
 
-*Notes*
+* Notas *
 
-Both RSSI and S meter are not calibrated and will vary somewhat between different radios in their accuracy
+Tanto el RSSI como el medidor S no están calibrados y variarán un poco entre diferentes radios en su precisión
 
-DMR signals by their nature, because they are pulse transmissions will not give accurate RSSI values.
+Las señales DMR por su naturaleza, debido a que son transmisiones de pulso, no proporcionarán valores RSSI precisos.
 
-The number in the top right of the display is for debugging purposes and is the number reported by the receiver hardware.
+El número en la parte superior derecha de la pantalla es para fines de depuración y es el número informado por el hardware del receptor.
 
-### Battery
+### Batería
 
-Displays the current battery voltage.
+Muestra el voltaje actual de la batería.
 
-![](media/battery.jpg)
+! [] (media / battery.jpg)
 
-### Last Heard
+### Última escucha
 
-Displays a record of the last 16 DMR stations that the radio has received.
+Muestra un registro de las últimas 16 estaciones DMR que ha recibido la radio.
 
-![](media/last-heard.jpg)
+! [] (media / last-hear.jpg)
 
-Pressing the **Up** or **Down** arrows cycles through the list to show stations which have been heard.
+Al presionar las flechas ** Arriba ** o ** Abajo ** se recorre la lista para mostrar las estaciones que se han escuchado.
 
-The radio stores data on the last 16 stations that were heard 
+La radio almacena datos de las últimas 16 estaciones que se escucharon
 
-### Firmware Info
+### Información de firmware
 
-![](media/firmware-info.jpg)
+! [] (media / firmware-info.jpg)
 
-Displays the date and time the firmware was built, and also the Github commit code in brackets. 
+Muestra la fecha y hora en que se creó el firmware, y también el código de confirmación de Github entre paréntesis.
 
-To view details on Github, append the code to  
+Para ver detalles sobre Github, agregue el código a
 https://github.com/rogerclarkmelbourne/OpenGD77/commit/
 
-e.g.  
+p.ej.
 https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7
 
-### Options
+### Opciones
 
-The **Options** screen is the new name for the **Utilities** menu.
+La pantalla ** Opciones ** es el nuevo nombre para el menú ** Utilidades **.
 
-![](media/menu-options.jpg)
+! [] (media / menu-options.jpg)
 
-This menu controls various settings specific to the OpenGD77 firmware
+Este menú controla varias configuraciones específicas del firmware OpenGD77
 
-![](media/options-screen.jpg)
+! [] (media / options-screen.jpg)
 
 #### DMR mic
 
-This controls the audio gain of the DMR microphone input system, relative to the default value. 
+Esto controla la ganancia de audio del sistema de entrada de micrófono DMR, en relación con el valor predeterminado.
 
-This only adjusts the gain on DMR, and does not affect the FM mic gain.
-Settings are in 3dB steps, with 0dB being the normal default setting, which is the same as the official firmware.
+Esto solo ajusta la ganancia en DMR y no afecta la ganancia del micrófono FM.
+La configuración se realiza en pasos de 3dB, siendo 0dB la configuración predeterminada normal, que es lo mismo que el firmware oficial.
 
-#### Beep volume
+#### Volumen del pitido
 
-This controls the volume of the beep and other tones, and can be set from 100% to 10%
+Esto controla el volumen del pitido y otros tonos, y se puede configurar del 100% al 10%
 
-#### Timeout beep
+#### Pitido de tiempo de espera
 
-This setting controls whether the radio emits timeout warning beeps during transmission when the timeout is about to expire and transmission will be terminated.
+Esta configuración controla si la radio emite pitidos de advertencia de tiempo de espera durante la transmisión cuando el tiempo de espera está por expirar y la transmisión finalizará.
 
-#### Fact Reset
+#### Restablecimiento de hechos
 
-Resets the radio to default settings, and reads the CPS VFO A values from the codeplug into the VFO screen. 
+Restablece la radio a la configuración predeterminada y lee los valores de CPS VFO A del codeplug en la pantalla VFO.
 
-**The radio can also be set to the default settings by holding the Blue (Function) key while turning on the radio.**
+** La radio también se puede establecer en la configuración predeterminada manteniendo presionada la tecla azul (Función) mientras se enciende la radio. **
 
-#### Calibration
+#### Calibración
 
-Turns ON/OFF the calibration function (default OFF).
+Activa / desactiva la función de calibración (valor predeterminado).
 
-Some radios seem to have invalid calibration data, possibly because the official firmware has corrupted the calibration parameters in the Flash memory.
+Algunas radios parecen tener datos de calibración no válidos, posiblemente porque el firmware oficial ha dañado los parámetros de calibración en la memoria Flash.
 
-If the radio does not seem to transmit or receive correctly. Try disabling the calibration and rebooting the radio, as the nominal calibration parameters used by the OpenGD77 firmware normally work almost as well as correct calibration data.
+Si la radio no parece transmitir o recibir correctamente. Intente deshabilitar la calibración y reiniciar la radio, ya que los parámetros de calibración nominales utilizados por el firmware OpenGD77 normalmente funcionan casi tan bien como los datos de calibración correctos.
 
-#### Band Limits
+#### Límites de banda
 
-Turns ON/Off the transmit band limit function that prevent transmission outside of the Amateur Radio bands. (Default ON).
+Activa / desactiva la función de límite de banda de transmisión que impide la transmisión fuera de las bandas de radioaficionados. (Predeterminado activado).
 
-### Display Options
+### Opciones de pantalla
 
-![](media/display-options.jpg)
+! [] (media / display-options.jpg)
 
-Colour mode
-: This option allows for Normal or inverse colour display. Normal is white background with black pixels; Inverse is black background with white pixels.
-: Note. This does not completely replicated the GD-77 “Black” display hardware version, because that radio uses a different LCD panel which physically has a back background, whereas the normal GD-77 have a LCD panel with white background
+Modo de color
+: Esta opción permite la visualización en color normal o inversa. Normal es el fondo blanco con píxeles negros; Inverso es fondo negro con píxeles blancos.
+: Nota. Esto no replica completamente la versión de hardware de la pantalla "Negro" GD-77, porque esa radio usa un panel LCD diferente que físicamente tiene un fondo posterior, mientras que el GD-77 normal tiene un panel LCD con fondo blanco.
 
-Brightness
-: The OpenGD77 firmware allows the display backlight brightness to be controlled from 100% to 0%, in 10% steps between 10% and 100% and below 10% the brightness is controlled in 1% steps.
-: The default backlight brightness (default 100%).
-: Use the Right and Left arrow keys to adjust the brightness.
+Brillo
+: El firmware OpenGD77 permite controlar el brillo de la retroiluminación de la pantalla del 100% al 0%, en pasos del 10% entre 10% y 100% y por debajo del 10%, el brillo se controla en pasos del 1%.
+: El brillo predeterminado de la luz de fondo (predeterminado 100%).
+: Use las teclas de flecha derecha e izquierda para ajustar el brillo.
 
-Contrast
-: The OpenGD77 firmware allows the display contrast to be controlled. 
-: The values are the number sent to the LCD panel controller, with a usable range from 12 to 30. Higher values result in more contrast, but also increase the darkness of the background.
-: The Official firmware uses a value of 12, however this is did not appear to be the optimum value, so the OpenGD77 firmware uses 18 as the default. 
+Contraste
+: El firmware OpenGD77 permite controlar el contraste de la pantalla.
+: Los valores son el número enviado al controlador del panel LCD, con un rango utilizable de 12 a 30. Los valores más altos producen más contraste, pero también aumentan la oscuridad del fondo.
+: El firmware oficial usa un valor de 12, sin embargo, este no parecía ser el valor óptimo, por lo que el firmware OpenGD77 usa 18 como valor predeterminado.
 
-Timeout
-: Sets the time before the display backlight is extinguished (default 5 seconds).
-: Setting this value to zero prevents the backlight from turning off at all.
+Se acabó el tiempo
+: Establece el tiempo antes de que se apague la luz de fondo de la pantalla (predeterminado 5 segundos).
+: Establecer este valor en cero evita que la luz de fondo se apague.
 
-### Channel Details
+### Detalles del canal
 
-![](media/channel-details.jpg)
+! [] (media / channel-details.jpg)
 
-Step
-: Selects the VFO/Channel frequency step size.
+Paso
+: Selecciona el tamaño de paso de frecuencia VFO / Canal.
 
-Color Code
-: Sets the color code when the VFO/Channel is set to DMR
+Codigo de color
+: Establece el código de color cuando el VFO / Canal está configurado en DMR
 
-Timeslot
-: Selects DMR Timeslot 1 or 2 when the VFO/Channel is set to DMR.
+Intervalo de tiempo
+: Selecciona DMR Timeslot 1 o 2 cuando el VFO / Canal está configurado en DMR.
 
 Tx CTCSS
-: Sets the transmit CTCSS tone when the VFO/Channel is set to FM
+: Establece el tono de transmisión CTCSS cuando el VFO / Canal está configurado en FM
 
 RX CTCSS
-: Sets the receive CTCSS tone when the VFO/Channel is set to FM
+: Establece el tono de recepción CTCSS cuando el VFO / Canal está configurado en FM
 
-Bandwidth
-: Sets the Rx and Tx bandwidth in FM mode to either 25Khz or 12.5Khz 
+Ancho de banda
+: Establece el ancho de banda Rx y Tx en modo FM en 25Khz o 12.5Khz
 
-Pressing the **Green** menu key confirms the changes and saves the settings to the codeplug, or in the case of the VFO the changes are saved to the non-volatile settings.  
-Pressing the **Red** menu key closes the menu without making any changes to the channel.
+Al presionar la tecla de menú ** Verde ** se confirman los cambios y se guardan las configuraciones en el codeplug, o en el caso del VFO, los cambios se guardan en las configuraciones no volátiles.
+Al presionar la tecla de menú ** Rojo ** se cierra el menú sin realizar ningún cambio en el canal.
 
-### Credits
+### Créditos
 
-![](media/credits.jpg)
+! [] (media / Créditos.jpg)
 
-Details of the creators of OpenGD77 firmware.
+Detalles de los creadores del firmware OpenGD77.
 
-If other developers contribute to the development effort they will be added to this screen, and  the addition details will be viewed by pressing the **Down Arrow** to scroll the text
+Si otros desarrolladores contribuyen al esfuerzo de desarrollo, se agregarán a esta pantalla, y los detalles de la adición se verán presionando la ** flecha hacia abajo ** para desplazar el texto
 
-## Making and receiving DMR Private Calls
+## Realización y recepción de llamadas privadas DMR
 
-### To make a Private Call
+### Para hacer una llamada privada
 
-In DMR mode, either in the VFO or the Channel screen...
+En modo DMR, ya sea en el VFO o en la pantalla del canal ...
 
-* Press the # key twice to enter the Private Call DMR ID
+* Presione la tecla # dos veces para ingresar la ID de DMR de llamada privada
 
-* The top of the screen will now show “PC entry” 
+* La parte superior de la pantalla ahora mostrará "Entrada de PC"
 
-* Enter the station’s DMR ID e.g. 5053238 
+* Ingrese la ID DMR de la estación, p. Ej. 5053238
 
-* Press the Green menu key to conform, or the Red menu key to exit.
+* Presione la tecla de menú verde para conformar, o la tecla de menú roja para salir.
 
-Note.
+Nota.
 
-If you make a mistake when entering the number, press the **Left** arrow key to erase the digits one by one.
+Si comete un error al ingresar el número, presione la tecla de flecha ** Izquierda ** para borrar los dígitos uno por uno.
 
-If the PC ID you entered is in the DMR ID database, you had previously uploaded to the radio, the stations Callsign and name will now be displayed on the screen.
+Si la ID de PC que ingresó está en la base de datos de ID de DMR, la había subido previamente a la radio, el indicativo y el nombre de la estación ahora se mostrarán en la pantalla.
 
-If the ID is not in the DMR ID database, the text “ID: “ followed by the number will be displayed
+Si la ID no está en la base de datos de ID de DMR, se mostrará el texto "ID:" seguido del número
 
-**The radio is now in Private call mode.**
+** La radio ahora está en modo de llamada privada. **
 
-To return to normal Talkgroup operation, there are 3 methods
+Para volver a la operación normal de Talkgroup, hay 3 métodos
 
-1. Press **Function + Red** menu key
+1. Presione la tecla de menú ** Función + Rojo **
 
-2. Press the **Left or Right** arrow key which will load the next TG in the Rx Group list assigned to the VFO or the Channel
+2. Presione la tecla de flecha ** Izquierda o Derecha ** que cargará el siguiente TG en la lista de Grupo Rx asignado al VFO o al Canal
 
-3. Press the **Hash (#)** key, then enter a TG number and press the **Green** menu key.
+3. Presione la tecla ** Hash (#) **, luego ingrese un número TG y presione la tecla de menú ** Verde **.
 
 
-*Note*
+*Nota*
 
-When in Private Call mode, changing to from the VFO mode the Channel mode and vice versa, via the Red menu key will not change go back to TalkGroup mode
+Cuando esté en el modo de llamada privada, al cambiar del modo de VFO al modo de canal y viceversa, a través de la tecla de menú roja no cambiará volver al modo de grupo de conversación
 
-### To Receive a Private Call
+### Para recibir una llamada privada
 
-On receipt of a private call, the radio will display this screen
+Al recibir una llamada privada, la radio mostrará esta pantalla
 
-![](media/accept-call.jpg)
+! [] (media / accept-call.jpg)
 
-With the callers Callsign and Name (or ID) displayed on the above this text on the display.
+Con el indicativo de llamada y el nombre (o ID) que se muestran en la parte superior de este texto en la pantalla.
 
-To Accept the call, and configure the radio to return the Private call back to the calling station, Press the **Green** menu button, for YES. Otherwise either press the **Red** menu key, for No, or ignore the prompt and continue using the radio as normal.
+Para aceptar la llamada y configurar la radio para que devuelva la llamada privada a la estación que llama, presione el botón de menú ** Verde **, para SÍ. De lo contrario, presione la tecla de menú ** Rojo **, para No, o ignore el mensaje y continúe usando la radio normalmente.
 
-If you accept the Private Call, the radio will be switched into Private Call mode, ready for transmission. So that the callers ID or name is show e.g.
+Si acepta la llamada privada, la radio cambiará al modo de llamada privada, lista para la transmisión. Para que se muestre la identificación o el nombre de la persona que llama, p.
 
-![](media/private-call.jpg)
+! [] (media / private-call.jpg)
 
-Once the private call is complete, you can return to the Talkgroup you were on prior to accepting the Private Call, by pressing **Function + Red** menu key. (or by any of the methods described in the section on making a Private Call)
+Una vez que se complete la llamada privada, puede regresar al grupo de conversación en el que estaba antes de aceptar la llamada privada, presionando la tecla de menú ** Función + Rojo **. (o por cualquiera de los métodos descritos en la sección sobre cómo hacer una llamada privada)
 
-## Hotspot mode
+## Modo de punto de acceso
 
-*Note.  At the time of writing Hotspot mode does not work in the Tier 2 version of the firmware.*
+*Nota. Al momento de escribir, el modo Hotspot no funciona en la versión de Nivel 2 del firmware. *
 
-The OpenGD77 firmware can operate as a DMR (*voice only*) hotspot when connected via its USB programming cable to a Raspberry Pi running PiStar or any other device that is running MMDVMHost.
+El firmware OpenGD77 puede funcionar como un punto de acceso DMR (* solo voz *) cuando se conecta a través de su cable de programación USB a un Raspberry Pi que ejecuta PiStar o cualquier otro dispositivo que ejecute MMDVMHost.
 
-Note. 
+Nota.
 
-Hotspot mode is not compatible with software like BlueDV
+El modo de punto de acceso no es compatible con software como BlueDV
 
 
-First, connect the GD-77 to a Raspberry Pi via its programming cable.
+Primero, conecte el GD-77 a una Raspberry Pi a través de su cable de programación.
 
-![](media/hotspot-connections.jpg)
+! [] (media / hotspot-connections.jpg)
 
-Hotspot mode works with the Raspberry Pi Zero, but a adaptor cable is needed to convert from the micro USB port on the RPi Zero to the full size USB plug on the GD-77 programming cable.
+El modo de punto de acceso funciona con Raspberry Pi Zero, pero se necesita un cable adaptador para convertir desde el puerto micro USB en el RPi Zero al enchufe USB de tamaño completo en el cable de programación GD-77.
 
 
-In the PiStar Configuration screen, select “OpenGD77 DMR hotspot (USB)” as the modem type.
+En la pantalla de configuración de PiStar, seleccione "Punto de acceso DMR OpenGD77 (USB)" como tipo de módem.
 
-![](media/pistar-configuration.png)
+! [] (media / pistar-configuration.png)
 
-If your version of PiStar does not contain the OpenGD77 DMR Hotspot as an option, please update your version of PiStar.
+Si su versión de PiStar no contiene el Hotspot DMR de OpenGD77 como una opción, actualice su versión de PiStar.
 
 
-With the GD-77 already connected and turned on, after the modem type is changed in PiStar, the display will change on the GD-77 to show its in Hotspot Mode, and will show the Colour Code, Receive frequency and approximate Tx power in mW.
+Con el GD-77 ya conectado y encendido, después de cambiar el tipo de módem en PiStar, la pantalla cambiará en el GD-77 para mostrar su modo de punto de acceso, y mostrará el código de color, la frecuencia de recepción y la potencia aproximada de Tx en mW.
 
-![](media/hotspot-mode.jpg)
+! [] (media / hotspot-mode.jpg)
 
-If the GD-77 does not enter Hotspot mode, power cycle the GD-77 and power cycle PiStar
+Si el GD-77 no ingresa al modo Hotspot, apague y encienda el GD-77 y apague y encienda PiStar
 
-If the GD-77 still fails to enter hotspot mode, check your USB connections.
+Si el GD-77 aún no puede ingresar al modo de punto de acceso, verifique sus conexiones USB.
 
-Note.
+Nota.
 
-By default PiStar configures the “modem” to have a power setting of “100” in the Expert -> MMDVMHost settings.
+Por defecto, PiStar configura el "módem" para que tenga una configuración de potencia de "100" en la configuración Experto -> MMDVMHost.
 
-This is 100% of the maximum power of the modem, and in the case of the GD-77 the maximum power output is 5W, but the radio is not designed to operate as a hotspot, where it may be continuously transmitting.
+Esto es el 100% de la potencia máxima del módem, y en el caso del GD-77, la potencia de salida máxima es de 5W, pero la radio no está diseñada para funcionar como un punto de acceso, donde puede estar transmitiendo continuamente.
 
-The maximum power setting that the GD-77 can support for continuous transmission, will vary depending on the operating environment, including the ambient temperature and antenna SWR etc.
+La configuración de potencia máxima que el GD-77 puede admitir para la transmisión continua variará según el entorno operativo, incluida la temperatura ambiente y la ROE de la antena, etc.
 
-It’s the responsibility of the user to set an appropriate power level that will not overheat and damage the PA. 
+Es responsabilidad del usuario establecer un nivel de potencia adecuado que no sobrecaliente ni dañe el PA.
 
 
-In Hotspot mode, if PiStar (MMDVMHost) sends a power setting of 100% it, the assumption is that that PiStar has not been correctly configured for the OpenGD77 and this value is disregarded.
+En el modo Hotspot, si PiStar (MMDVMHost) envía una configuración de potencia del 100%, se supone que PiStar no se configuró correctamente para OpenGD77 y que este valor no se tiene en cuenta.
 
-Instead the firmware will use the power setting specified by the user in the Utilities menu, which will default to 1W.
+En cambio, el firmware utilizará la configuración de energía especificada por el usuario en el menú Utilidades, que por defecto será 1W.
 
-If the power setting in the PiStar MMDVMHost Expert settings is any other value e.g. 50%, the hotspot will use that power value e.g. 2.5W (2500mW)
+Si la configuración de energía en la configuración de PiStar MMDVMHost Expert es cualquier otro valor, p. 50%, el punto de acceso utilizará ese valor de potencia, p. 2.5W (2500mW)
 
 
-The receive frequency specified by PiStar will be displayed at the bottom of the screen.
+La frecuencia de recepción especificada por PiStar se mostrará en la parte inferior de la pantalla.
 
-Note.
-Offsets should not be applied to the Tx or Rx frequencies in PiStar, because the GD-77 should not need any offsets, and any offset will be reflected in the frequency displayed on the GD-77, because PiStar actually sends the master frequency +/- the offset to the hotspot.
+Nota.
+Las compensaciones no deben aplicarse a las frecuencias Tx o Rx en PiStar, porque el GD-77 no debería necesitar ninguna compensación, y cualquier compensación se reflejará en la frecuencia que se muestra en el GD-77, porque PiStar realmente envía la frecuencia maestra + / - el desplazamiento al punto de acceso.
 
 
-When the GD-77 receives a RF DMR signal, the green LED on the top of the GD-77 will illuminate as normal, and the name and callsign are displayed if the DMR ID database contains that ID. If the ID is not in the DMR ID database, the ID number will be shown.
+Cuando el GD-77 recibe una señal de RF DMR, el LED verde en la parte superior del GD-77 se iluminará normalmente, y el nombre y el indicativo se muestran si la base de datos de ID de DMR contiene esa ID. Si la ID no está en la base de datos de ID de DMR, se mostrará el número de ID.
 
-![](media/hotspot-rx.jpg)
+! [] (media / hotspot-rx.jpg)
 
-When PiStar receives traffic from the Internet and sends it to the hotspot for transmission, the hotspot displays the Callsign and name or the DMR ID, and the Tx frequency is show.
+Cuando PiStar recibe tráfico de Internet y lo envía al punto de acceso para su transmisión, el punto de acceso muestra el indicativo de llamada y el nombre o la ID de DMR, y se muestra la frecuencia de transmisión.
 
-The LED on the top of the radio also turns red to indicate the radio is transmitting
+El LED en la parte superior de la radio también se vuelve rojo para indicar que la radio está transmitiendo
 
-## Programming Channels and Talkgroups for use with OpenGD77.
+## Programación de canales y grupos de conversación para usar con OpenGD77.
 
-**NOTE**: You cannot use the standard Radioddity CPS to write to a GD-77 flashed with the OpenGD77 firmware. If you wish to use the Radioddity CPS the radio will need to run the official Radioddity firmware. Once the code plug has been written to the GD-77 you can then flash the OpenGD77 firmware to the radio and it will then read and operate with the code plug written to it with the standard firmware and CPS software.
+** NOTA **: No puede usar el CPS estándar de Radioddity para escribir en un GD-77 flasheado con el firmware OpenGD77. Si desea utilizar Radioddity CPS, la radio deberá ejecutar el firmware oficial de Radioddity. Una vez que el código de conexión se ha escrito en el GD-77, puede actualizar el firmware de OpenGD77 a la radio y luego leerá y funcionará con el código de conexión escrito con el firmware estándar y el software CPS.
 
 
-As an alternative to the Radioddity CPS you can use the latest version of the “Community CPS” by Roger Clark that includes support for OpenGD77. Please see the next section for information specific to the Community CPS. The information in the rest of this section is applicable to both the standard Radioddity CPS and the Community CPS.
+Como alternativa al Radioddity CPS, puede usar la última versión del "Community CPS" de Roger Clark que incluye soporte para OpenGD77. Consulte la siguiente sección para obtener información específica sobre Community CPS. La información en el resto de esta sección es aplicable tanto al Radioddity CPS estándar como al Community CPS.
 
-### OVERVIEW 
+### VISIÓN GENERAL
 
-With OpenGD77, unlike most commercial DMR radios it is not necessary to create multiple channels to use the same frequency with many different transmit Talkgroups. 
+Con OpenGD77, a diferencia de la mayoría de las radios DMR comerciales, no es necesario crear múltiples canales para usar la misma frecuencia con muchos Talkgroups de transmisión diferentes.
 
-In DMR mode when using either the VFO or the Zones and Channels, you can use the LEFT/RIGHT arrow keys to scroll through and select any of the Talkgroups in the Rx Group list assigned to the current channel, or to VFO A
+En el modo DMR cuando se usa el VFO o las Zonas y Canales, puede usar las teclas de flecha IZQUIERDA / DERECHA para desplazarse y seleccionar cualquiera de los Grupos de conversación en la lista de Grupos de Rx asignados al canal actual, o al VFO A
 
-When programming the radio using the CPS first add all the Talkgroups that you think you may wish to use into the Digital Contacts list. 
+Cuando programe la radio usando el CPS, primero agregue todos los grupos de conversación que cree que puede desear usar en la lista de contactos digitales.
 
 
-Please download the latest GD77 Community CPS from here:  
+Descargue el último CPS de la comunidad GD77 desde aquí:
 https://github.com/rogerclarkmelbourne/radioddity_gd-77_cps/raw/master/installer/RadioddityGD77CPS31XCommunityEditionInstaller.exe
 
-![](media/cps-treeview-rx-grouplist.png)
+! [] (media / cps-treeview-rx-grouplist.png)
 
-Next create one or more “RX Group Lists” and populate each with the sets of the Talkgroups that you will want to use with different channels. You can have the same Talkgroups in many RX Group Lists.
+A continuación, cree una o más “Listas de grupos RX” y complete cada una con los conjuntos de grupos de conversación que desee utilizar con diferentes canales. Puede tener los mismos grupos de conversación en muchas listas de grupos RX.
 
-![](media/cps-rx-grouplist.png)
+! [] (media / cps-rx-grouplist.png)
 
-Now setup the channels. Enter the frequencies, slot and colour code as normal for a DMR channel. 
+Ahora configure los canales. Ingrese las frecuencias, la ranura y el código de color de forma normal para un canal DMR.
 
-Note. Currently the OpenGD77 firmware does not use the “Contact” eg. Shown as TG9 below. Instead it uses the TG’s in the Rx Group list. 
-However we advise all users to set the “Contact” to the first channel in the Rx Group list assigned to the channel
+Nota. Actualmente el firmware OpenGD77 no utiliza el "Contacto", por ejemplo. Se muestra como TG9 a continuación. En su lugar, utiliza los TG en la lista del Grupo Rx.
+Sin embargo, recomendamos a todos los usuarios que establezcan el "Contacto" en el primer canal en la lista de Grupo Rx asignado al canal
 
-Next select the RX Group List that you wish to use for the channel. 
+Luego seleccione la Lista de grupos RX que desea utilizar para el canal.
 
-Currently the OpenGD77 firmware does not use the Rx Group list to filter the incoming DMR signal. It is in “Digital Monitor Mode” (aka promiscuous mode) all the time.
+Actualmente, el firmware OpenGD77 no usa la lista Rx Group para filtrar la señal DMR entrante. Está en "Modo de monitor digital" (también conocido como modo promiscuo) todo el tiempo.
 
-However in the future the firmware will optionally allow filtering so that the radio only accepts stations transmitting on one of the TG’s in the Rx Group List
+Sin embargo, en el futuro, el firmware opcionalmente permitirá el filtrado para que la radio solo acepte estaciones que transmitan en uno de los TG en la Lista de grupos Rx
 
-![](media/cps-channel-rx-grouplist.png)
+! [] (media / cps-channel-rx-grouplist.png)
 
-*Please note. The “Contact” is not used by the OpenGD77 firmware. You must use the Rx Group list to define the TG’s you want to use with each channel.
-Hence you must have at least 1 Rx Group and it must contain at least 1 Digital Contact which is a TalkGroup*
+*Tenga en cuenta. El "Contacto" no es utilizado por el firmware OpenGD77. Debe usar la lista de Grupo Rx para definir los TG que desea usar con cada canal.
+Por lo tanto, debe tener al menos 1 grupo Rx y debe contener al menos 1 contacto digital que sea un grupo de conversación *
 
 
-Finally save your codeplug to your computer before writing the code plug to the radio using either the standard Radioddity CPS to programme the radio before flashing it to OpenGD77 or if you are using the special OpenGD77 compatible version of the “Community CPS”, (as detailed in the next section) you can write the code plug directly to an already flashed OpenGD77 radio.
+Finalmente, guarde su codeplug en su computadora antes de escribir el enchufe del código en la radio utilizando Radioddity CPS estándar para programar la radio antes de actualizarla a OpenGD77 o si está utilizando la versión especial compatible con OpenGD77 del "Community CPS" (como se detalla en la siguiente sección) puede escribir el conector de código directamente en una radio OpenGD77 ya flasheada.
 
-## Using the Community CPS to program the OpenGD77
+## Uso de la Community CPS para programar OpenGD77
 
-Support for the OpenGD77 has now been included to the Community CPS by Roger Clark, which can be downloaded from here:  
+El soporte para OpenGD77 ahora ha sido incluido en la Community CPS por Roger Clark, que se puede descargar desde aquí:
 https://github.com/rogerclarkmelbourne/radioddity_gd-77_cps/raw/master/installer/RadioddityGD77CPS31XCommunityEditionInstaller.exe
 
-This version also still supports the official firmware as well as the OpenGD77
+Esta versión también es compatible con el firmware oficial, así como con el OpenGD77
 
-#### New Driver Installation
+#### Instalación del nuevo controlador
 
-The CPS installer now also installs the OpenGD77 comm port driver, however the comm port driver can be installed manually by downloading the files from  
+El instalador de CPS ahora también instala el controlador del puerto de comunicaciones OpenGD77, sin embargo, el controlador del puerto de comunicaciones se puede instalar manualmente descargando los archivos de
 https://github.com/rogerclarkmelbourne/OpenGD77/tree/master/OpenGD77CommDriver
 
-To install the driver, download and unzip the zip file, and run the .bat file
+Para instalar el controlador, descargue y descomprima el archivo zip y ejecute el archivo .bat
 
-Once the driver is installed, the Windows device manager should show the “OpenGD77” in the “ports” section of the Windows device manager
+Una vez que se instala el controlador, el administrador de dispositivos de Windows debe mostrar "OpenGD77" en la sección "puertos" del administrador de dispositivos de Windows
 
-![](media/device-manager-ports.png)
+! [] (media / device-manager-ports.png)
 
-#### OpenGD77 Menu
+#### Menú OpenGD77
 
-In the CPS there is a new menu item under the Extras menu for OpenGD77 Support, which opens this window
+En el CPS hay un nuevo elemento de menú en el menú Extras para OpenGD77 Support, que abre esta ventana
 
-![](media/cps-opengd77-support.png)
+! [] (media / cps-opengd77-support.png)
 
-From here you can backup, the internal 64k EEPOM and the 1 mega byte Flash chip, as well as Reading and Writing the codeplug.
-The calibration data store in the Flash chip (At address 0x8f000) can be backed up and restored without backing up the whole of the Flash. 
+Desde aquí puede hacer una copia de seguridad, el EEPOM interno de 64k y el chip Flash de 1 megabyte, así como leer y escribir el codeplug.
+El almacenamiento de datos de calibración en el chip Flash (en la dirección 0x8f000) se puede hacer una copia de seguridad y restaurar sin hacer una copia de seguridad de todo el Flash.
 
-*Please note, if you restore the Flash you will also overwrite the calibration data as it’s stored in the 1Mb Flash chip.*
+* Tenga en cuenta que si restaura la Flash, también sobrescribirá los datos de calibración tal como están almacenados en el chip Flash de 1Mb. *
 
-#### Backup Before You Do Anything Else!
+#### ¡Haga una copia de seguridad antes de hacer cualquier otra cosa!
 
-Before writing a codeplug to the radio, you should backup both the EEPROM and Flash chip, and save the files somewhere safe, in case something goes wrong in the future and you need to restore the data.
+Antes de escribir un codeplug en la radio, debe hacer una copia de seguridad de la EEPROM y del chip Flash, y guardar los archivos en un lugar seguro, en caso de que algo salga mal en el futuro y necesite restaurar los datos.
 
-#### Reading and Writing Your Codeplug
+#### Lectura y escritura de su Codeplug
 
-To read the codeplug, press the “Read codeplug” button, wait for all 3 data sections to download, and then close the OpenGD77 Support window. To write a codeplug press the “Write codeplug” button.
+Para leer el codeplug, presione el botón "Leer codeplug", espere a que se descarguen las 3 secciones de datos y luego cierre la ventana de Soporte de OpenGD77. Para escribir un codeplug presione el botón "Escribir codeplug".
 
-#### Writing DMR ID’s
+#### Escribiendo ID de DMR
 
-The OpenGD77 supports extended DMR ID information, with up to 15 character for Callsign and name, as well as doubling the memory capacity for DMR ID’s.
+OpenGD77 admite información extendida de ID de DMR, con hasta 15 caracteres para distintivo de llamada y nombre, además de duplicar la capacidad de memoria para ID de DMR.
 
-Please select the “Enhanced firmware mode” Checkbox, and change the Number of characters menu to the desired DMR callsign and name length.  
-Note. Because the memory size used for the DMR ID is currently limited to 256, you can store more DMR ID’s if you assign fewer characters per ID. 
+Seleccione la casilla de verificación "Modo de firmware mejorado" y cambie el menú Número de caracteres al indicativo DMR deseado y la longitud del nombre.
+Nota. Debido a que el tamaño de memoria utilizado para la ID de DMR está actualmente limitado a 256, puede almacenar más ID de DMR si asigna menos caracteres por ID.
 
-![](media/cps-dmr-ids.png)
+! [] (media / cps-dmr-ids.png)
