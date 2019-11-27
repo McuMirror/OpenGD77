@@ -17,10 +17,10 @@ Debido al rápido ritmo de desarrollo, algunas fotos de pantallas ahora están d
 
 Las fotos se actualizarán cuando el firmware no cambie tan rápidamente.
 
-La intención del proyecto OpenGD77 es crear un firmware no comercial con todas las funciones que reemplace por completo el firmware de fábrica de Radioddity GD-77. Este firmware está diseñado específicamente para uso ** ** Radio Amateur **, y tiene características no disponibles en el firmware oficial.
+La intención del proyecto OpenGD77 es crear un firmware no comercial con todas las funciones que reemplace por completo el firmware de fábrica de Radioddity GD-77. Este firmware está diseñado específicamente para uso****Radio Amateur**, y tiene características no disponibles en el firmware oficial.
 
 **Nota.**
-** El firmware aún está en desarrollo y hay algunas áreas clave de funcionalidad que aún no se han escrito. **
+**El firmware aún está en desarrollo y hay algunas áreas clave de funcionalidad que aún no se han escrito.**
 
 1. Actualmente, el firmware estable solo funciona en DMR con puntos de acceso simplex o en otras radios DMR para contactos simplex. Esto se debe a que el firmware actualmente no es totalmente compatible con DMR Tier 2 requerido para la mayoría de los sistemas comerciales y de repetidores MMDVM.
 
@@ -67,7 +67,7 @@ Gracias a todos los Beta Testers que proporcionan informes detallados de errores
 
 #### Descargar enlaces y otros recursos
 
-** Código fuente de firmware y binarios: **
+**Código fuente de firmware y binarios:**
 
 Versión estable: (Modo Tier 1 + Hotspot)
 https://github.com/rogerclarkmelbourne/OpenGD77/raw/master/firmware_binaries/OpenGD77.sgl
@@ -75,7 +75,7 @@ https://github.com/rogerclarkmelbourne/OpenGD77/raw/master/firmware_binaries/Ope
 Versión de nivel 2 "Alpha 2" (no incluye el modo Hotspot)
 https://github.com/rogerclarkmelbourne/OpenGD77/raw/Tier2/firmware_binaries/daily_builds/OpenGD77_Tier2_Alpha_2.sgl
 
-** GD-77 Community CPS con soporte para OpenGD77: **
+**GD-77 Community CPS con soporte para OpenGD77:**
 https://github.com/rogerclarkmelbourne/radioddity_gd-77_cps/raw/master/installer/RadioddityGD77CPS31XCommunityEditionInstaller.exe
 
 ## Instalación
@@ -117,24 +117,24 @@ La pantalla del canal muestra la misma información en la fila superior, pero mu
 
 En las pantallas VFO y Channel:
 
-Presione el botón de menú ** Rojo ** para alternar entre las pantallas VFO y Canal
+Presione el botón de menú**Rojo**para alternar entre las pantallas VFO y Canal
 
-Presione la tecla de menú ** Verde ** para ingresar al sistema de menús
+Presione la tecla de menú**Verde**para ingresar al sistema de menús
 
-Al presionar ** Función + Verde ** se accede rápidamente a la pantalla de detalles del Canal, a la que también se puede acceder a través del sistema de menús.
+Al presionar**Función + Verde**se accede rápidamente a la pantalla de detalles del Canal, a la que también se puede acceder a través del sistema de menús.
 *Nota.*
 El VFO es en realidad un tipo especial de canal; por lo tanto, la pantalla Detalles del canal también funciona para el VFO.
 
 #### Cambio de canal VFO <->
 
-Presione la tecla ** Función + Estrella (*) ** para alternar entre los modos FM y DMR en las pantallas VFO o Canal.
+Presione la tecla**Función + Estrella (*)**para alternar entre los modos FM y DMR en las pantallas VFO o Canal.
 
 #### Cambio de intervalo de tiempo en modo DMR
-En modo DMR, al presionar la tecla ** Estrella (*) ** se alterna entre Timeslot 1 y Timeslot 2
+En modo DMR, al presionar la tecla**Estrella (*)**se alterna entre Timeslot 1 y Timeslot 2
 
 #### Control de la potencia de transmisión
 
-Presione ** Función + Derecha ** para aumentar la potencia, Presione ** Función + Izquierda ** para disminuir la potencia. La potencia se puede configurar en 250mW, 500mW, 750mW, 1W, 2W, 3W, 4W y 5W.
+Presione**Función + Derecha**para aumentar la potencia, Presione**Función + Izquierda**para disminuir la potencia. La potencia se puede configurar en 250mW, 500mW, 750mW, 1W, 2W, 3W, 4W y 5W.
 Nota. La potencia de salida solo será correcta después de que el operador haya calibrado su propia radio, ya que el GD-77 no parece tener una calibración de potencia muy precisa aplicada en la fábrica por TYT
 
 #### Gráfico de barras de intensidad de señal
@@ -154,29 +154,29 @@ La pantalla del canal muestra el número del canal actual, así como la zona act
 
 #### Cambio de canales dentro de la zona actual
 
-Al presionar las teclas ** Arriba ** o ** Abajo **, el canal cambia en la zona actual, y el número de canal en la zona se mostrará en lugar del nombre de la zona.
+Al presionar las teclas**Arriba**o**Abajo**, el canal cambia en la zona actual, y el número de canal en la zona se mostrará en lugar del nombre de la zona.
 
 #### Cambio de zonas
 
-Presionando ** Función + Flecha arriba ** o ** Función + Flecha izquierda ** cambia a la zona siguiente o anterior
+Presionando**Función + Flecha arriba**o**Función + Flecha izquierda**cambia a la zona siguiente o anterior
 
 ![](media/changing-zones.jpg)
 
 #### Pantalla del canal Menú rápido
 
-Al presionar el botón ** Naranja ** en la parte superior de la radio en el modo Canal, aparece el menú Rápido para la pantalla Canal.
+Al presionar el botón**Naranja**en la parte superior de la radio en el modo Canal, aparece el menú Rápido para la pantalla Canal.
 
 ##### Copiando un canal a VFO
 
 ##### Lee el VFO en el canal actual
 
-Presione la tecla ** Verde ** para confirmar y guardar el canal actualizado en la memoria de codeplug ** Tecla ** roja para cancelar.
+Presione la tecla**Verde**para confirmar y guardar el canal actualizado en la memoria de codeplug**Tecla**roja para cancelar.
 
 ![](media/channel-quick-menu.jpg)
 
 #### Menú rápido de VFO
 
-Al presionar el botón ** Naranja ** en la parte superior de la radio en modo VFO, se muestra el menú Rápido para la pantalla VFO. Actualmente esto tiene tres opciones
+Al presionar el botón**Naranja**en la parte superior de la radio en modo VFO, se muestra el menú Rápido para la pantalla VFO. Actualmente esto tiene tres opciones
 
 ##### Copie la frecuencia Tx a la frecuencia Rx
 
@@ -184,7 +184,7 @@ Al presionar el botón ** Naranja ** en la parte superior de la radio en modo VF
 
 ##### Copie la frecuencia Rx a la frecuencia Tx
 
-Presione la tecla ** Verde ** para confirmar la copia o la tecla ** Roja ** para cancelar.
+Presione la tecla**Verde**para confirmar la copia o la tecla**Roja**para cancelar.
 
 ![](media/vfo-quick-menu.jpg)
 
@@ -200,7 +200,7 @@ No estoy seguro de si el firmware oficial puede recibir en la entrada de un repe
 
 #### Selección de intervalo de tiempo
 
-La tecla ** Estrella (*) ** alterna entre Timeslot 1 y Timeslot 2 (versión de Nivel 2)
+La tecla**Estrella (*)**alterna entre Timeslot 1 y Timeslot 2 (versión de Nivel 2)
 
 Nota. El número de intervalo de tiempo no se muestra en esta foto, pero aparece a la derecha del "DMR", también se muestra el Código de color a la izquierda del porcentaje de batería
 
@@ -230,14 +230,14 @@ Nota. A medida que los datos de Talker Alias ​​se envían lentamente a medid
 
 #### Selección de grupo de conversación de la lista de grupos Rx
 
-Presione las teclas ** Izquierda ** o ** Flecha derecha ** para recorrer los Grupos de conversación en el Grupo Rx asignado al VFO o Canal en el CPS.
+Presione las teclas**Izquierda**o**Flecha derecha**para recorrer los Grupos de conversación en el Grupo Rx asignado al VFO o Canal en el CPS.
 Este TalkGroup se aplicará tanto a Rx como a Tx.
 
 #### Asignación de Timeslot a Digital Contact TalkGroup
 
 Una nueva característica introducida en Community CPS permite que se aplique un TimeSlot a cada grupo de conversación de contacto digital
 
-De manera predeterminada, la anulación del canal TS está deshabilitada. Esto significa que si se presionan las flechas ** Izquierda ** o ** Derecha ** para seleccionar este TG dentro de la lista Grupo Rx, el intervalo de tiempo asignado al Canal (en el CPS) o se cambia manualmente usando la ** Estrella ** la llave no cambiará
+De manera predeterminada, la anulación del canal TS está deshabilitada. Esto significa que si se presionan las flechas**Izquierda**o**Derecha**para seleccionar este TG dentro de la lista Grupo Rx, el intervalo de tiempo asignado al Canal (en el CPS) o se cambia manualmente usando la**Estrella**la llave no cambiará
 
 Sin embargo, si el contacto digital tiene un TS de anulación asignado. P.ej. TS 1.
 Cuando este contacto digital TG se selecciona presionando las flechas derecha o izquierda, el intervalo de tiempo se establecerá en el intervalo de tiempo asignado al contacto digital TG
@@ -246,19 +246,19 @@ Cuando este contacto digital TG se selecciona presionando las flechas derecha o 
 
 Si se muestra un Talkgroup en video inverso durante la recepción de una señal DMR, esto indica que el Tx TalkGroup actual no coincide con el TalkGroup recibido, por lo tanto, presionar el PTT no transmitirá a la estación en el mismo TalkGroup.
 
-Si desea transmitir en el mismo TalkGroup que la señal recibida actualmente, presione el botón ** Función ** (azul) en el costado de la radio mientras el TalkGroup se muestra en video inverso y Tx TalkGroup se configurará en Rx TalkGroup
+Si desea transmitir en el mismo TalkGroup que la señal recibida actualmente, presione el botón**Función**(azul) en el costado de la radio mientras el TalkGroup se muestra en video inverso y Tx TalkGroup se configurará en Rx TalkGroup
 
 ![](media/talkgroup-inverse-video.jpg)
 
 #### Entrada manual del número de TalkGroup
 
-Presione el botón ** Hash (#) ** para ingresar el número de TalkGroup. Seguido por la tecla ** Verde ** para confirmar
+Presione el botón**Hash (#)**para ingresar el número de TalkGroup. Seguido por la tecla**Verde**para confirmar
 
 ![](media/talkgroup-entry.jpg)
 
 #### Entrada de número de llamada privada
 
-Presione el ** Hash (#) ** nuevamente para ingresar un número de ID de DMR de llamada privada.
+Presione el**Hash (#)**nuevamente para ingresar un número de ID de DMR de llamada privada.
 
 ![](media/private-call-entry.jpg)
 
@@ -266,15 +266,15 @@ En todas las pantallas de entrada numérica, al presionar la tecla de menú roja
 
 #### Selección de contacto digital
 
-Presione ** Hash (#) ** nuevamente para acceder a los contactos digitales definidos en el CPS
+Presione**Hash (#)**nuevamente para acceder a los contactos digitales definidos en el CPS
 
 ![](media/contact-selection.jpg)
 
 El nombre del contacto se muestra en el medio de la pantalla, p. "TG 505 TS2" y el número de TalkGroup o PC se muestran en un texto más pequeño en la parte inferior de la pantalla
 
-Presione las flechas ** Arriba ** o ** Abajo ** para recorrer la lista de Contactos digitales
+Presione las flechas**Arriba**o**Abajo**para recorrer la lista de Contactos digitales
 
-Presione ** Verde ** para seleccionar o ** Rojo ** para cancelar.
+Presione**Verde**para seleccionar o**Rojo**para cancelar.
 
 Las llamadas privadas también se pueden seleccionar.
 
@@ -282,11 +282,11 @@ Las llamadas privadas también se pueden seleccionar.
 
 #### Entrada del número de ID de DMR de la estación
 
-En el modo de selección de contacto, presione la tecla ** Función + Hash (#) **, y se puede ingresar una ID de DMR alternativa, para propósitos de prueba, para anular temporalmente su número de ID de DMR normal que se cargó del codeplug.
+En el modo de selección de contacto, presione la tecla**Función + Hash (#)**, y se puede ingresar una ID de DMR alternativa, para propósitos de prueba, para anular temporalmente su número de ID de DMR normal que se cargó del codeplug.
 
 Esta ID de DMR se usará para la transmisión * hasta que * la radio se reinicie o ingrese otra ID de DMR a través de la misma pantalla.
 
-Para que el cambio sea permanente, de modo que se regrese al codeplug Presione ** Función + Verde ** en lugar de ** Verde ** para ingresar el número.
+Para que el cambio sea permanente, de modo que se regrese al codeplug Presione**Función + Verde**en lugar de**Verde**para ingresar el número.
 
 ![](media/user-dmr-id.jpg)
 
@@ -294,24 +294,24 @@ Para que el cambio sea permanente, de modo que se regrese al codeplug Presione *
 
 #### FM / FM Estrecho
 
-** Para FM con banda de 25 kHz con el texto "FM" se muestra en la esquina superior izquierda de la pantalla.
-Para banda estrecha / 12.5kHz se muestra el texto "FMN" **
+**Para FM con banda de 25 kHz con el texto "FM" se muestra en la esquina superior izquierda de la pantalla.
+Para banda estrecha / 12.5kHz se muestra el texto "FMN"**
 
 #### tono CTCSS
 
-Esto se puede configurar para el canal o VFO, las letras ** CT ** ** CR ** o ** CTR ** se mostrarán junto a la indicación de FM en la parte superior de la pantalla.
+Esto se puede configurar para el canal o VFO, las letras**CT****CR**o**CTR**se mostrarán junto a la indicación de FM en la parte superior de la pantalla.
 
-** CT ** significa solo tono CTCSS Tx. ** CR ** significa solo tono CTCSS Rx. ** CTR ** significa tonos CTCSS Tx y Rx.
+**CT**significa solo tono CTCSS Tx.**CR**significa solo tono CTCSS Rx.**CTR**significa tonos CTCSS Tx y Rx.
 
 ![](media/ctcss-tone.jpg)
 
 #### Silenciador
 
-Al presionar las teclas ** Izquierda ** o ** Derecha **, se activa el control de silenciador FM
+Al presionar las teclas**Izquierda**o**Derecha**, se activa el control de silenciador FM
 
 ![](media/squelch.jpg)
 
-Una vez en el modo de control de silenciamiento, presionar ** Derecha ** más el silenciador, ** Izquierda ** abre más el silenciador.
+Una vez en el modo de control de silenciamiento, presionar**Derecha**más el silenciador,**Izquierda**abre más el silenciador.
 
 El VFO y cada canal tienen configuraciones de silenciador individuales
 
@@ -322,14 +322,14 @@ En este ejemplo, el silenciador en el VFO se establece en 20%
 
 Si se cambia el silenciador en el VFO, el valor se recordará incluso si la radio se apaga y enciende. Sin embargo, si se cambia el silenciador en un canal, el valor es solo una anulación temporal.
 
-Para hacer que el cambio de silenciamiento sea permanente a un canal, presione ** Función + Verde ** para ingresar a la pantalla Detalles del canal, y luego presione ** Verde ** nuevamente para guardar los datos del canal en el código.
+Para hacer que el cambio de silenciamiento sea permanente a un canal, presione**Función + Verde**para ingresar a la pantalla Detalles del canal, y luego presione**Verde**nuevamente para guardar los datos del canal en el código.
 
 Nota.
 Si Rx CTCSS está habilitado, esto tiene prioridad sobre el control del silenciador, y bajar el umbral del silenciador no hará que se abra el silenciador.
 
 #### 1750Hz Tono para operación repetidora
 
-Al presionar el botón ** Función ** durante la transmisión de FM, se envía el tono de 1750Hz requerido para alguna operación del repetidor.
+Al presionar el botón**Función**durante la transmisión de FM, se envía el tono de 1750Hz requerido para alguna operación del repetidor.
 
 #### Transmisión de tonos DTMF
 
@@ -343,13 +343,13 @@ El tono también será audible a través del altavoz.
 
 El VFO muestra la frecuencia Tx y Rx en todo momento.
 
-Cuando la frecuencia seleccionada actualmente es la frecuencia ** Rx **, se muestra una flecha a la izquierda de “** R **”, los cambios en la frecuencia ajustarán las frecuencias Tx y Rx.
+Cuando la frecuencia seleccionada actualmente es la frecuencia**Rx**, se muestra una flecha a la izquierda de “**R**”, los cambios en la frecuencia ajustarán las frecuencias Tx y Rx.
 
 #### Cambio de frecuencia paso arriba / abajo
 
-Al presionar las flechas ** Arriba ** o ** Abajo **, cambiará la frecuencia por el valor definido en la frecuencia Valor de paso definido para el VFO en el CPS.
+Al presionar las flechas**Arriba**o**Abajo**, cambiará la frecuencia por el valor definido en la frecuencia Valor de paso definido para el VFO en el CPS.
 
-El paso se puede ajustar presionando ** Función + Verde ** para ingresar al modo Detalles de canal y luego ajustar la configuración de "Paso"
+El paso se puede ajustar presionando**Función + Verde**para ingresar al modo Detalles de canal y luego ajustar la configuración de "Paso"
 
 #### Entrada de frecuencia numérica
 
@@ -363,17 +363,17 @@ Si se ingresa una frecuencia no válida, se reproducen los pitidos de error.
 
 Al ingresar una frecuencia:
 
-Al presionar la tecla ** Rojo ** se cancela la entrada
+Al presionar la tecla**Rojo**se cancela la entrada
 
-Al presionar ** Flecha izquierda ** se eliminan los dígitos uno por uno.
+Al presionar**Flecha izquierda**se eliminan los dígitos uno por uno.
 
 #### Para ajustar la frecuencia Tx, independiente de la frecuencia Rx.
 
-Presione el botón ** Función (Azul) ** en el costado de la radio y la flecha ** Abajo **.
+Presione el botón**Función (Azul)**en el costado de la radio y la flecha**Abajo**.
 
-Esto cambiará la frecuencia seleccionada actualmente a la frecuencia Tx, y la flecha se moverá a la izquierda de “** T **” en lugar de “** R **”
+Esto cambiará la frecuencia seleccionada actualmente a la frecuencia Tx, y la flecha se moverá a la izquierda de “**T**” en lugar de “**R**”
 
-Para cambiar la frecuencia Rx nuevamente, presione ** Función + Flecha arriba **.
+Para cambiar la frecuencia Rx nuevamente, presione**Función + Flecha arriba**.
 
 Cuando se cambia la frecuencia Tx, la frecuencia Rx no se cambiará.
 
@@ -415,11 +415,11 @@ Si TOT está configurado para el canal actual o VFO, cuando el temporizador haga
 
 A la cerradura el teclado.
 
-En la pantalla VFO o Channel, presione la tecla de menú ** Verde ** para mostrar el menú Principal, luego presione la tecla ** Estrella (*) **
+En la pantalla VFO o Channel, presione la tecla de menú**Verde**para mostrar el menú Principal, luego presione la tecla**Estrella (*)**
 
 Para desbloquear el teclado
 
-Presione y mantenga presionado el botón ** Función (Azul) ** y presione la tecla ** Estrella (*) **
+Presione y mantenga presionado el botón**Función (Azul)**y presione la tecla**Estrella (*)**
 
 ## Las teclas y botones de control
 
@@ -427,15 +427,15 @@ Presione y mantenga presionado el botón ** Función (Azul) ** y presione la tec
 
 ## El sistema de menús
 
-Al presionar la tecla ** VERDE ** se ingresa al sistema de menús, presione nuevamente para ingresar a una subsección del menú o para salir del menú.
+Al presionar la tecla**VERDE**se ingresa al sistema de menús, presione nuevamente para ingresar a una subsección del menú o para salir del menú.
 
-Presione la tecla ** ROJO ** para retroceder un nivel o para salir del sistema de menús.
+Presione la tecla**ROJO**para retroceder un nivel o para salir del sistema de menús.
 
-Las teclas de flecha ** ARRIBA ** y ** ABAJO ** suben y bajan por las distintas páginas del sistema de menús.
+Las teclas de flecha**ARRIBA**y**ABAJO**suben y bajan por las distintas páginas del sistema de menús.
 
-Las teclas de flecha ** IZQUIERDA ** y ** DERECHA ** cambiarán los elementos individuales en el sistema de menús donde se pueden cambiar.
+Las teclas de flecha**IZQUIERDA**y**DERECHA**cambiarán los elementos individuales en el sistema de menús donde se pueden cambiar.
 
-El botón ** AZUL ** en el costado de la radio, conocido como SK2, se usa como “** Función **”. Se accede a varias funciones manteniendo presionada la tecla "función" cuando se presiona un botón en el teclado.
+El botón**AZUL**en el costado de la radio, conocido como SK2, se usa como “**Función**”. Se accede a varias funciones manteniendo presionada la tecla "función" cuando se presiona un botón en el teclado.
 
 ## Menú principal
 
@@ -455,7 +455,7 @@ Cuando se selecciona la zona Todos los canales, la pantalla del canal muestra el
 
 ![](media/all-canales-channel-screen.jpg)
 
-Al presionar las flechas ** Arriba ** y ** Abajo ** se recorrerán todos los canales en todas las zonas
+Al presionar las flechas**Arriba**y**Abajo**se recorrerán todos los canales en todas las zonas
 
 Al presionar cualquiera de las teclas numéricas en el teclado, ingresa "Pasar al modo de número de canal"
 
@@ -489,7 +489,7 @@ Muestra un registro de las últimas 16 estaciones DMR que ha recibido la radio.
 
 ![](media/last-hear.jpg)
 
-Al presionar las flechas ** Arriba ** o ** Abajo ** se recorre la lista para mostrar las estaciones que se han escuchado.
+Al presionar las flechas**Arriba**o**Abajo**se recorre la lista para mostrar las estaciones que se han escuchado.
 
 La radio almacena datos de las últimas 16 estaciones que se escucharon
 
@@ -507,7 +507,7 @@ https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7
 
 ### Opciones
 
-La pantalla ** Opciones ** es el nuevo nombre para el menú ** Utilidades **.
+La pantalla**Opciones**es el nuevo nombre para el menú**Utilidades**.
 
 ![](media/menu-options.jpg)
 
@@ -534,7 +534,7 @@ Esta configuración controla si la radio emite pitidos de advertencia de tiempo 
 
 Restablece la radio a la configuración predeterminada y lee los valores de CPS VFO A del codeplug en la pantalla VFO.
 
-** La radio también se puede establecer en la configuración predeterminada manteniendo presionada la tecla azul (Función) mientras se enciende la radio. **
+**La radio también se puede establecer en la configuración predeterminada manteniendo presionada la tecla azul (Función) mientras se enciende la radio.**
 
 #### Calibración
 
@@ -592,8 +592,8 @@ RX CTCSS
 Ancho de banda
 : Establece el ancho de banda Rx y Tx en modo FM en 25Khz o 12.5Khz
 
-Al presionar la tecla de menú ** Verde ** se confirman los cambios y se guardan las configuraciones en el codeplug, o en el caso del VFO, los cambios se guardan en las configuraciones no volátiles.
-Al presionar la tecla de menú ** Rojo ** se cierra el menú sin realizar ningún cambio en el canal.
+Al presionar la tecla de menú**Verde**se confirman los cambios y se guardan las configuraciones en el codeplug, o en el caso del VFO, los cambios se guardan en las configuraciones no volátiles.
+Al presionar la tecla de menú**Rojo**se cierra el menú sin realizar ningún cambio en el canal.
 
 ### Créditos
 
@@ -601,7 +601,7 @@ Al presionar la tecla de menú ** Rojo ** se cierra el menú sin realizar ningú
 
 Detalles de los creadores del firmware OpenGD77.
 
-Si otros desarrolladores contribuyen al esfuerzo de desarrollo, se agregarán a esta pantalla, y los detalles de la adición se verán presionando la ** flecha hacia abajo ** para desplazar el texto
+Si otros desarrolladores contribuyen al esfuerzo de desarrollo, se agregarán a esta pantalla, y los detalles de la adición se verán presionando la**flecha hacia abajo**para desplazar el texto
 
 ## Realización y recepción de llamadas privadas DMR
 
@@ -619,21 +619,21 @@ En modo DMR, ya sea en el VFO o en la pantalla del canal ...
 
 Nota.
 
-Si comete un error al ingresar el número, presione la tecla de flecha ** Izquierda ** para borrar los dígitos uno por uno.
+Si comete un error al ingresar el número, presione la tecla de flecha**Izquierda**para borrar los dígitos uno por uno.
 
 Si la ID de PC que ingresó está en la base de datos de ID de DMR, la había subido previamente a la radio, el indicativo y el nombre de la estación ahora se mostrarán en la pantalla.
 
 Si la ID no está en la base de datos de ID de DMR, se mostrará el texto "ID:" seguido del número
 
-** La radio ahora está en modo de llamada privada. **
+**La radio ahora está en modo de llamada privada.**
 
 Para volver a la operación normal de Talkgroup, hay 3 métodos
 
-1. Presione la tecla de menú ** Función + Rojo **
+1. Presione la tecla de menú**Función + Rojo**
 
-2. Presione la tecla de flecha ** Izquierda o Derecha ** que cargará el siguiente TG en la lista de Grupo Rx asignado al VFO o al Canal
+2. Presione la tecla de flecha**Izquierda o Derecha**que cargará el siguiente TG en la lista de Grupo Rx asignado al VFO o al Canal
 
-3. Presione la tecla ** Hash (#) **, luego ingrese un número TG y presione la tecla de menú ** Verde **.
+3. Presione la tecla**Hash (#)**, luego ingrese un número TG y presione la tecla de menú**Verde**.
 
 
 *Nota*
@@ -648,13 +648,13 @@ Al recibir una llamada privada, la radio mostrará esta pantalla
 
 Con el indicativo de llamada y el nombre (o ID) que se muestran en la parte superior de este texto en la pantalla.
 
-Para aceptar la llamada y configurar la radio para que devuelva la llamada privada a la estación que llama, presione el botón de menú ** Verde **, para SÍ. De lo contrario, presione la tecla de menú ** Rojo **, para No, o ignore el mensaje y continúe usando la radio normalmente.
+Para aceptar la llamada y configurar la radio para que devuelva la llamada privada a la estación que llama, presione el botón de menú**Verde**, para SÍ. De lo contrario, presione la tecla de menú**Rojo**, para No, o ignore el mensaje y continúe usando la radio normalmente.
 
 Si acepta la llamada privada, la radio cambiará al modo de llamada privada, lista para la transmisión. Para que se muestre la identificación o el nombre de la persona que llama, p.
 
 ![](media/private-call.jpg)
 
-Una vez que se complete la llamada privada, puede regresar al grupo de conversación en el que estaba antes de aceptar la llamada privada, presionando la tecla de menú ** Función + Rojo **. (o por cualquiera de los métodos descritos en la sección sobre cómo hacer una llamada privada)
+Una vez que se complete la llamada privada, puede regresar al grupo de conversación en el que estaba antes de aceptar la llamada privada, presionando la tecla de menú**Función + Rojo**. (o por cualquiera de los métodos descritos en la sección sobre cómo hacer una llamada privada)
 
 ## Modo de punto de acceso
 
@@ -723,7 +723,7 @@ El LED en la parte superior de la radio también se vuelve rojo para indicar que
 
 ## Programación de canales y grupos de conversación para usar con OpenGD77.
 
-** NOTA **: No puede usar el CPS estándar de Radioddity para escribir en un GD-77 flasheado con el firmware OpenGD77. Si desea utilizar Radioddity CPS, la radio deberá ejecutar el firmware oficial de Radioddity. Una vez que el código de conexión se ha escrito en el GD-77, puede actualizar el firmware de OpenGD77 a la radio y luego leerá y funcionará con el código de conexión escrito con el firmware estándar y el software CPS.
+**NOTA**: No puede usar el CPS estándar de Radioddity para escribir en un GD-77 flasheado con el firmware OpenGD77. Si desea utilizar Radioddity CPS, la radio deberá ejecutar el firmware oficial de Radioddity. Una vez que el código de conexión se ha escrito en el GD-77, puede actualizar el firmware de OpenGD77 a la radio y luego leerá y funcionará con el código de conexión escrito con el firmware estándar y el software CPS.
 
 
 Como alternativa al Radioddity CPS, puede usar la última versión del "Community CPS" de Roger Clark que incluye soporte para OpenGD77. Consulte la siguiente sección para obtener información específica sobre Community CPS. La información en el resto de esta sección es aplicable tanto al Radioddity CPS estándar como al Community CPS.
