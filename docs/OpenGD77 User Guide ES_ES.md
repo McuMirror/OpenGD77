@@ -2,7 +2,7 @@
 OpenGD77  Guía del usuario 
 ---
 
-![](media / OpenGD77-logo.svg)
+![](media/OpenGD77-logo.svg)
 
 # OpenGD77 Guía del usuario
 (19 de noviembre de 2019)
@@ -96,7 +96,7 @@ El firmware OpenGD77 tiene 2 pantallas principales. La pantalla VFO y la pantall
 
 Inicialmente después de instalar el firmware OpenGD77, se mostrará la pantalla VFO.
 
-![](media / vfo-screen.jpg)
+![](media/vfo-screen.jpg)
 
 La frecuencia utilizada en el VFO para Tx y Rx se leerá en la configuración "VFO A" del codeplug.
 
@@ -113,7 +113,7 @@ La flecha a la izquierda de la R (frecuencia de recepción) indica que las flech
 
 La pantalla del canal muestra la misma información en la fila superior, pero muestra el nombre del canal (en este ejemplo, “VK3RGL D”), así como la zona (“VK3 DMR”) y en modo DMR también se mostrará el TalkGroup
 
-![](media / dmr-screen.jpg)
+![](media/dmr-screen.jpg)
 
 En las pantallas VFO y Channel:
 
@@ -145,12 +145,12 @@ En modo DMR, el medidor de señal solo estará activo cuando el hardware DMR det
 
 En modo FM, el medidor de señal debe funcionar todo el tiempo.
 
-![](media / signal-meter.jpg)
+![](media/signal-meter.jpg)
 
 ### Funcionalidad específica de la pantalla del canal
 La pantalla del canal muestra el número del canal actual, así como la zona actual.
 
-![](media / channel-and-zone.jpg)
+![](media/channel-and-zone.jpg)
 
 #### Cambio de canales dentro de la zona actual
 
@@ -160,7 +160,7 @@ Al presionar las teclas ** Arriba ** o ** Abajo **, el canal cambia en la zona a
 
 Presionando ** Función + Flecha arriba ** o ** Función + Flecha izquierda ** cambia a la zona siguiente o anterior
 
-![](media / changing-zones.jpg)
+![](media/changing-zones.jpg)
 
 #### Pantalla del canal Menú rápido
 
@@ -172,7 +172,7 @@ Al presionar el botón ** Naranja ** en la parte superior de la radio en el modo
 
 Presione la tecla ** Verde ** para confirmar y guardar el canal actualizado en la memoria de codeplug ** Tecla ** roja para cancelar.
 
-![](media / channel-quick-menu.jpg)
+![](media/channel-quick-menu.jpg)
 
 #### Menú rápido de VFO
 
@@ -186,7 +186,7 @@ Al presionar el botón ** Naranja ** en la parte superior de la radio en modo VF
 
 Presione la tecla ** Verde ** para confirmar la copia o la tecla ** Roja ** para cancelar.
 
-![](media / vfo-quick-menu.jpg)
+![](media/vfo-quick-menu.jpg)
 
 **Nota.**
 
@@ -208,23 +208,23 @@ Nota. El número de intervalo de tiempo no se muestra en esta foto, pero aparece
 
 Cuando se recibe una señal DMR que usa el mismo código de color seleccionado para el VFO o el canal, la pantalla de la radio mostrará el grupo de conversación de la estación y la ID DMR
 
-![](media / talkgroup-and-dmr-id.jpg)
+![](media/talkgroup-and-dmr-id.jpg)
 
 Si la ID de DMR está en la base de datos de ID de DMR cargada previamente en la radio, se mostrará el indicativo y el nombre.
 
-![](media / callsign-and-name.jpg)
+![](media/callsign-and-name.jpg)
 
 #### Pantalla de alias de hablador
 
 En la red Brandmeister, si la ID de DMR de la estación no está en la base de datos de ID de DMR, la pantalla mostrará la información de Alias ​​Talker enviada por Brandmeister.
 
-![](media / talker-alias.jpg)
+![](media/talker-alias.jpg)
 
 El indicativo se mostrará en el centro de la pantalla y se mostrará información adicional en la parte inferior de la pantalla. La información adicional tendrá como valor predeterminado el texto "ID de DMR:" seguido del número de ID de DMR de la estación.
 
 Si la estación ha ingresado algún dato en la sección APRS de su página Brandmeister "Self care", ese texto se mostrará en lugar del número de ID de DMR.
 
-![](media / talker-alias-data.jpg)
+![](media/talker-alias-data.jpg)
 
 Nota. A medida que los datos de Talker Alias ​​se envían lentamente a medida que se incrustan dentro de los marcos de datos de audio DMR, el indicativo aparecerá primero y aproximadamente medio segundo después, la ID DMR u otro texto llegará a través de los datos DMR y se mostrará.
 
@@ -248,19 +248,19 @@ Si se muestra un Talkgroup en video inverso durante la recepción de una señal 
 
 Si desea transmitir en el mismo TalkGroup que la señal recibida actualmente, presione el botón ** Función ** (azul) en el costado de la radio mientras el TalkGroup se muestra en video inverso y Tx TalkGroup se configurará en Rx TalkGroup
 
-![](media / talkgroup-inverse-video.jpg)
+![](media/talkgroup-inverse-video.jpg)
 
 #### Entrada manual del número de TalkGroup
 
 Presione el botón ** Hash (#) ** para ingresar el número de TalkGroup. Seguido por la tecla ** Verde ** para confirmar
 
-![](media / talkgroup-entry.jpg)
+![](media/talkgroup-entry.jpg)
 
 #### Entrada de número de llamada privada
 
 Presione el ** Hash (#) ** nuevamente para ingresar un número de ID de DMR de llamada privada.
 
-![](media / private-call-entry.jpg)
+![](media/private-call-entry.jpg)
 
 En todas las pantallas de entrada numérica, al presionar la tecla de menú roja se vuelve a la pantalla anterior, ya sea la pantalla VFO o Channel
 
@@ -268,7 +268,7 @@ En todas las pantallas de entrada numérica, al presionar la tecla de menú roja
 
 Presione ** Hash (#) ** nuevamente para acceder a los contactos digitales definidos en el CPS
 
-![](media / contact-selection.jpg)
+![](media/contact-selection.jpg)
 
 El nombre del contacto se muestra en el medio de la pantalla, p. "TG 505 TS2" y el número de TalkGroup o PC se muestran en un texto más pequeño en la parte inferior de la pantalla
 
@@ -278,7 +278,7 @@ Presione ** Verde ** para seleccionar o ** Rojo ** para cancelar.
 
 Las llamadas privadas también se pueden seleccionar.
 
-![](media / private-call-selection.jpg)
+![](media/private-call-selection.jpg)
 
 #### Entrada del número de ID de DMR de la estación
 
@@ -288,7 +288,7 @@ Esta ID de DMR se usará para la transmisión * hasta que * la radio se reinicie
 
 Para que el cambio sea permanente, de modo que se regrese al codeplug Presione ** Función + Verde ** en lugar de ** Verde ** para ingresar el número.
 
-![](media / user-dmr-id.jpg)
+![](media/user-dmr-id.jpg)
 
 ### Funcionalidad específica de FM (pantallas VFO y Channel)
 
@@ -303,13 +303,13 @@ Esto se puede configurar para el canal o VFO, las letras ** CT ** ** CR ** o ** 
 
 ** CT ** significa solo tono CTCSS Tx. ** CR ** significa solo tono CTCSS Rx. ** CTR ** significa tonos CTCSS Tx y Rx.
 
-![](media / ctcss-tone.jpg)
+![](media/ctcss-tone.jpg)
 
 #### Silenciador
 
 Al presionar las teclas ** Izquierda ** o ** Derecha **, se activa el control de silenciador FM
 
-![](media / squelch.jpg)
+![](media/squelch.jpg)
 
 Una vez en el modo de control de silenciamiento, presionar ** Derecha ** más el silenciador, ** Izquierda ** abre más el silenciador.
 
@@ -339,7 +339,7 @@ El tono también será audible a través del altavoz.
 
 ### Funcionalidad específica de VFO
 
-![](media / vfo-screen.jpg)
+![](media/vfo-screen.jpg)
 
 El VFO muestra la frecuencia Tx y Rx en todo momento.
 
@@ -355,7 +355,7 @@ El paso se puede ajustar presionando ** Función + Verde ** para ingresar al mod
 
 Al presionar cualquiera de las teclas numéricas se permite la entrada directa de la frecuencia.
 
-![](media / frequency-entry.jpg)
+![](media/frequency-entry.jpg)
 
 Cuando se han ingresado todos los dígitos, se reproducen los pitidos de aceptación y la pantalla vuelve a la pantalla de VFO.
 
@@ -395,7 +395,7 @@ En DMR Tier2, el temporizador no comenzará a contar hasta que el repetidor se a
 
 Durante DMR Tx, se muestra un medidor VU que muestra el nivel del micrófono de entrada, en forma de gráfico de barras en la parte superior de la pantalla.
 
-![](media / dmr-mic-level.jpg)
+![](media/dmr-mic-level.jpg)
 
 ##### Pitido de advertencia de tiempo de espera
 
@@ -405,13 +405,13 @@ Se puede configurar una advertencia de tiempo de espera en el menú Utilidades. 
 
 Si TOT está configurado para el canal actual o VFO, cuando el temporizador haga la cuenta regresiva a cero, la transmisión se detendrá, se escuchará un pitido de advertencia y la radio dejará de transmitir
 
-![](media / timeout.jpg)
+![](media/timeout.jpg)
 
 ## Otras pantallas
 
 #### Bloquear pantalla
 
-![](media / lock-screen.jpg)
+![](media/lock-screen.jpg)
 
 A la cerradura el teclado.
 
@@ -423,7 +423,7 @@ Presione y mantenga presionado el botón ** Función (Azul) ** y presione la tec
 
 ## Las teclas y botones de control
 
-![](media / keys-and-buttons-NEW.png)
+![](media/keys-and-buttons-NEW.png)
 
 ## El sistema de menús
 
@@ -439,27 +439,27 @@ El botón ** AZUL ** en el costado de la radio, conocido como SK2, se usa como �
 
 ## Menú principal
 
-![](media / main-menu.jpg)
+![](media/main-menu.jpg)
 
 ### Zona
 
 Este menú se usa para seleccionar qué grupos de canales, llamados Zona, se usan en la pantalla del Canal y funcionan de la misma manera que el firmware oficial de Radioddity, excepto con una adición.
 
-![](media / zones.jpg)
+![](media/zones.jpg)
 
 Además de las zonas que se definen en el CPS y se cargan en el GD-77 utilizando el Community CPS. El firmware crea una zona especial llamada todos los canales
 
-![](media / all-canales.jpg)
+![](media/all-canales.jpg)
 
 Cuando se selecciona la zona Todos los canales, la pantalla del canal muestra el número del canal en lugar del nombre de la zona, p. CH 1
 
-![](media / all-canales-channel-screen.jpg)
+![](media/all-canales-channel-screen.jpg)
 
 Al presionar las flechas ** Arriba ** y ** Abajo ** se recorrerán todos los canales en todas las zonas
 
 Al presionar cualquiera de las teclas numéricas en el teclado, ingresa "Pasar al modo de número de canal"
 
-![](media / goto-channel-number.jpg)
+![](media/goto-channel-number.jpg)
 
 En este modo, puede ingresar varios dígitos y luego presionar la tecla verde para confirmar, o la tecla roja para cancelar.
 
@@ -467,7 +467,7 @@ En este modo, puede ingresar varios dígitos y luego presionar la tecla verde pa
 
 Muestra un indicador de intensidad de señal que muestra el valor numérico de RSSI en dBm, junto con un gráfico de barras de la Unidad S.
 
-![](media / rssi.jpg)
+![](media/rssi.jpg)
 
 * Notas *
 
@@ -481,13 +481,13 @@ El número en la parte superior derecha de la pantalla es para fines de depuraci
 
 Muestra el voltaje actual de la batería.
 
-![](media / battery.jpg)
+![](media/battery.jpg)
 
 ### Última escucha
 
 Muestra un registro de las últimas 16 estaciones DMR que ha recibido la radio.
 
-![](media / last-hear.jpg)
+![](media/last-hear.jpg)
 
 Al presionar las flechas ** Arriba ** o ** Abajo ** se recorre la lista para mostrar las estaciones que se han escuchado.
 
@@ -495,7 +495,7 @@ La radio almacena datos de las últimas 16 estaciones que se escucharon
 
 ### Información de firmware
 
-![](media / firmware-info.jpg)
+![](media/firmware-info.jpg)
 
 Muestra la fecha y hora en que se creó el firmware, y también el código de confirmación de Github entre paréntesis.
 
@@ -509,11 +509,11 @@ https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7
 
 La pantalla ** Opciones ** es el nuevo nombre para el menú ** Utilidades **.
 
-![](media / menu-options.jpg)
+![](media/menu-options.jpg)
 
 Este menú controla varias configuraciones específicas del firmware OpenGD77
 
-![](media / options-screen.jpg)
+![](media/options-screen.jpg)
 
 #### DMR mic
 
@@ -550,7 +550,7 @@ Activa / desactiva la función de límite de banda de transmisión que impide la
 
 ### Opciones de pantalla
 
-![](media / display-options.jpg)
+![](media/display-options.jpg)
 
 Modo de color
 : Esta opción permite la visualización en color normal o inversa. Normal es el fondo blanco con píxeles negros; Inverso es fondo negro con píxeles blancos.
@@ -572,7 +572,7 @@ Se acabó el tiempo
 
 ### Detalles del canal
 
-![](media / channel-details.jpg)
+![](media/channel-details.jpg)
 
 Paso
 : Selecciona el tamaño de paso de frecuencia VFO / Canal.
@@ -597,7 +597,7 @@ Al presionar la tecla de menú ** Rojo ** se cierra el menú sin realizar ningú
 
 ### Créditos
 
-![](media / Créditos.jpg)
+![](media/Créditos.jpg)
 
 Detalles de los creadores del firmware OpenGD77.
 
@@ -644,7 +644,7 @@ Cuando esté en el modo de llamada privada, al cambiar del modo de VFO al modo d
 
 Al recibir una llamada privada, la radio mostrará esta pantalla
 
-![](media / accept-call.jpg)
+![](media/accept-call.jpg)
 
 Con el indicativo de llamada y el nombre (o ID) que se muestran en la parte superior de este texto en la pantalla.
 
@@ -652,7 +652,7 @@ Para aceptar la llamada y configurar la radio para que devuelva la llamada priva
 
 Si acepta la llamada privada, la radio cambiará al modo de llamada privada, lista para la transmisión. Para que se muestre la identificación o el nombre de la persona que llama, p.
 
-![](media / private-call.jpg)
+![](media/private-call.jpg)
 
 Una vez que se complete la llamada privada, puede regresar al grupo de conversación en el que estaba antes de aceptar la llamada privada, presionando la tecla de menú ** Función + Rojo **. (o por cualquiera de los métodos descritos en la sección sobre cómo hacer una llamada privada)
 
@@ -669,21 +669,21 @@ El modo de punto de acceso no es compatible con software como BlueDV
 
 Primero, conecte el GD-77 a una Raspberry Pi a través de su cable de programación.
 
-![](media / hotspot-connections.jpg)
+![](media/hotspot-connections.jpg)
 
 El modo de punto de acceso funciona con Raspberry Pi Zero, pero se necesita un cable adaptador para convertir desde el puerto micro USB en el RPi Zero al enchufe USB de tamaño completo en el cable de programación GD-77.
 
 
 En la pantalla de configuración de PiStar, seleccione "Punto de acceso DMR OpenGD77 (USB)" como tipo de módem.
 
-![](media / pistar-configuration.png)
+![](media/pistar-configuration.png)
 
 Si su versión de PiStar no contiene el Hotspot DMR de OpenGD77 como una opción, actualice su versión de PiStar.
 
 
 Con el GD-77 ya conectado y encendido, después de cambiar el tipo de módem en PiStar, la pantalla cambiará en el GD-77 para mostrar su modo de punto de acceso, y mostrará el código de color, la frecuencia de recepción y la potencia aproximada de Tx en mW.
 
-![](media / hotspot-mode.jpg)
+![](media/hotspot-mode.jpg)
 
 Si el GD-77 no ingresa al modo Hotspot, apague y encienda el GD-77 y apague y encienda PiStar
 
@@ -715,7 +715,7 @@ Las compensaciones no deben aplicarse a las frecuencias Tx o Rx en PiStar, porqu
 
 Cuando el GD-77 recibe una señal de RF DMR, el LED verde en la parte superior del GD-77 se iluminará normalmente, y el nombre y el indicativo se muestran si la base de datos de ID de DMR contiene esa ID. Si la ID no está en la base de datos de ID de DMR, se mostrará el número de ID.
 
-![](media / hotspot-rx.jpg)
+![](media/hotspot-rx.jpg)
 
 Cuando PiStar recibe tráfico de Internet y lo envía al punto de acceso para su transmisión, el punto de acceso muestra el indicativo de llamada y el nombre o la ID de DMR, y se muestra la frecuencia de transmisión.
 
@@ -740,11 +740,11 @@ Cuando programe la radio usando el CPS, primero agregue todos los grupos de conv
 Descargue el último CPS de la comunidad GD77 desde aquí:
 https://github.com/rogerclarkmelbourne/radioddity_gd-77_cps/raw/master/installer/RadioddityGD77CPS31XCommunityEditionInstaller.exe
 
-![](media / cps-treeview-rx-grouplist.png)
+![](media/cps-treeview-rx-grouplist.png)
 
 A continuación, cree una o más “Listas de grupos RX” y complete cada una con los conjuntos de grupos de conversación que desee utilizar con diferentes canales. Puede tener los mismos grupos de conversación en muchas listas de grupos RX.
 
-![](media / cps-rx-grouplist.png)
+![](media/cps-rx-grouplist.png)
 
 Ahora configure los canales. Ingrese las frecuencias, la ranura y el código de color de forma normal para un canal DMR.
 
@@ -757,7 +757,7 @@ Actualmente, el firmware OpenGD77 no usa la lista Rx Group para filtrar la seña
 
 Sin embargo, en el futuro, el firmware opcionalmente permitirá el filtrado para que la radio solo acepte estaciones que transmitan en uno de los TG en la Lista de grupos Rx
 
-![](media / cps-channel-rx-grouplist.png)
+![](media/cps-channel-rx-grouplist.png)
 
 *Tenga en cuenta. El "Contacto" no es utilizado por el firmware OpenGD77. Debe usar la lista de Grupo Rx para definir los TG que desea usar con cada canal.
 Por lo tanto, debe tener al menos 1 grupo Rx y debe contener al menos 1 contacto digital que sea un grupo de conversación *
@@ -781,13 +781,13 @@ Para instalar el controlador, descargue y descomprima el archivo zip y ejecute e
 
 Una vez que se instala el controlador, el administrador de dispositivos de Windows debe mostrar "OpenGD77" en la sección "puertos" del administrador de dispositivos de Windows
 
-![](media / device-manager-ports.png)
+![](media/device-manager-ports.png)
 
 #### Menú OpenGD77
 
 En el CPS hay un nuevo elemento de menú en el menú Extras para OpenGD77 Support, que abre esta ventana
 
-![](media / cps-opengd77-support.png)
+![](media/cps-opengd77-support.png)
 
 Desde aquí puede hacer una copia de seguridad, el EEPOM interno de 64k y el chip Flash de 1 megabyte, así como leer y escribir el codeplug.
 El almacenamiento de datos de calibración en el chip Flash (en la dirección 0x8f000) se puede hacer una copia de seguridad y restaurar sin hacer una copia de seguridad de todo el Flash.
@@ -809,4 +809,4 @@ OpenGD77 admite información extendida de ID de DMR, con hasta 15 caracteres par
 Seleccione la casilla de verificación "Modo de firmware mejorado" y cambie el menú Número de caracteres al indicativo DMR deseado y la longitud del nombre.
 Nota. Debido a que el tamaño de memoria utilizado para la ID de DMR está actualmente limitado a 256, puede almacenar más ID de DMR si asigna menos caracteres por ID.
 
-![](media / cps-dmr-ids.png)
+![](media/cps-dmr-ids.png)
