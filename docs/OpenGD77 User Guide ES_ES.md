@@ -423,7 +423,7 @@ Presione y mantenga presionado el botón**Función (Azul)**y presione la tecla**
 
 ## Las teclas y botones de control
 
-![](media/keys-and-buttons-NEW.png)
+![](media/keys-and-buttons-NEW.jpg)
 
 ## El sistema de menús
 

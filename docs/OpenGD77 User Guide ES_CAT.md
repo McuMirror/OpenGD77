@@ -423,7 +423,7 @@ Manteniu premut el botó**Funció (Blau)**i premeu la tecla**Estrella (*)**
 
 ## Les tecles i botons de control
 
-! [] (multimèdia / claus i botons.png)
+![](media/keys-and-buttons-NEW.jpg)
 
 ## El sistema de menús
 
